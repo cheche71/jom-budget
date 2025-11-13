@@ -1,75 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-    <!-- Page principale -->
-    <url>
-        <loc>https://cheche71.github.io/jom-budget/</loc>
-        <lastmod>2024-11-13</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>1.0</priority>
-    </url>
-    
-    <!-- Section Accueil -->
-    <url>
-        <loc>https://cheche71.github.io/jom-budget/#accueil</loc>
-        <lastmod>2024-11-13</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.9</priority>
-    </url>
-    
-    <!-- Section Mauvais réflexes -->
-    <url>
-        <loc>https://cheche71.github.io/jom-budget/#mauvais</loc>
-        <lastmod>2024-11-13</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    
-    <!-- Section Bons réflexes -->
-    <url>
-        <loc>https://cheche71.github.io/jom-budget/#bons</loc>
-        <lastmod>2024-11-13</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    
-    <!-- Section Conseils pratiques -->
-    <url>
-        <loc>https://cheche71.github.io/jom-budget/#conseils</loc>
-        <lastmod>2024-11-13</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    
-    <!-- Section Les conséquences -->
-    <url>
-        <loc>https://cheche71.github.io/jom-budget/#consequences</loc>
-        <lastmod>2024-11-13</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.7</priority>
-    </url>
-    
-    <!-- Section Quiz de départ -->
-    <url>
-        <loc>https://cheche71.github.io/jom-budget/#quiz-depart</loc>
-        <lastmod>2024-11-13</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.7</priority>
-    </url>
-    
-    <!-- Section Jeux pour s'entraîner -->
-    <url>
-        <loc>https://cheche71.github.io/jom-budget/#jeu</loc>
-        <lastmod>2024-11-13</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.7</priority>
-    </url>
-    
-    <!-- Section Quiz final -->
-    <url>
-        <loc>https://cheche71.github.io/jom-budget/#quiz-final</loc>
-        <lastmod>2024-11-13</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.7</priority>
-    </url>
+<url>
+<loc>https://cheche71.github.io/jom-budget/</loc>
+<lastmod>2024-11-13</lastmod>
+<changefreq>weekly</changefreq>
+<priority>1.0</priority>
+</url>
+<url>
+<loc>https://cheche71.github.io/jom-budget/index.html</loc>
+<lastmod>2024-11-13</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.9</priority>
+</url>
 </urlset>
 
