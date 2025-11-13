@@ -3,32 +3,81 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
     <title>Bien gérer son argent</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <!-- Feather Icons -->
+    <script src="https://unpkg.com/feather-icons"></script>
 </head>
 <body>
     <header>
-        <h1>Bien gérer son argent!</h1>
+        <div class="header-content">
+            <p class="header-subtitle">Un projet créé avec mon papa pour la Journée JOM 💙</p>
+            <h1>Apprends à gérer ton argent</h1>
+            <p class="header-description">Parce qu'être intelligent·e avec son argent, ça s'apprend !</p>
+        </div>
     </header>
 
     <main>
         <!-- Navigation par onglets -->
         <div class="tabs-container">
             <div class="tabs">
-                <button class="tab-button active" data-tab="accueil">🏠 Accueil</button>
-                <button class="tab-button" data-tab="quiz-depart">🎯 Quiz de départ</button>
-                <button class="tab-button" data-tab="mauvais">⚠️ Mauvais réflexes</button>
-                <button class="tab-button" data-tab="bons">✅ Bons réflexes</button>
-                <button class="tab-button" data-tab="consequences">📚 Les conséquences</button>
-                <button class="tab-button" data-tab="jeu">🎮 Le Défi du Mois</button>
-                <button class="tab-button" data-tab="quiz-final">🎓 Quiz final</button>
+                <button class="tab-button active" data-tab="accueil">
+                    <i data-feather="home"></i>
+                    <span>Accueil</span>
+                </button>
+                <button class="tab-button" data-tab="mauvais">
+                    <i data-feather="alert-triangle"></i>
+                    <span>Mauvais réflexes</span>
+                </button>
+                <button class="tab-button" data-tab="bons">
+                    <i data-feather="check-circle"></i>
+                    <span>Bons réflexes</span>
+                </button>
+                <button class="tab-button" data-tab="conseils">
+                    <i data-feather="compass"></i>
+                    <span>Conseils pratiques</span>
+                </button>
+                <button class="tab-button" data-tab="consequences">
+                    <i data-feather="book-open"></i>
+                    <span>Les conséquences</span>
+                </button>
+                <button class="tab-button" data-tab="quiz-depart">
+                    <i data-feather="help-circle"></i>
+                    <span>Quiz de départ</span>
+                </button>
+                <button class="tab-button" data-tab="jeu">
+                    <i data-feather="zap"></i>
+                    <span>Jeux pour s'entraîner</span>
+                </button>
+                <button class="tab-button" data-tab="quiz-final">
+                    <i data-feather="award"></i>
+                    <span>Quiz final</span>
+                </button>
             </div>
         </div>
 
         <!-- Contenu des onglets -->
         <div class="tab-content active" id="tab-accueil">
+            <h2 class="tab-page-title">
+                <i data-feather="home" style="width: 32px; height: 32px; color: var(--color-soft-blue); vertical-align: middle; margin-right: 12px;"></i>
+                Introduction
+            </h2>
+            <p class="tab-page-intro">Bienvenue sur ce site qui va t'aider à comprendre comment bien gérer ton argent et éviter les pièges financiers.</p>
+            
+            <!-- Image d'introduction -->
+            <div class="intro-image">
+                <img src="https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?w=800&q=80" alt="Pousse dans des pièces de monnaie" style="width: 100%; height: 100%; object-fit: cover; border-radius: 20px; box-shadow: 0 4px 16px rgba(0,0,0,0.08);">
+            </div>
+            
             <section class="intro">
-            <p class="intro-title">💰 Pourquoi c'est important de bien gérer son argent ?</p>
+            <p class="intro-title">
+                <i data-feather="dollar-sign" style="width: 28px; height: 28px; color: var(--color-soft-blue); vertical-align: middle; margin-right: 8px;"></i>
+                Pourquoi c'est important de bien gérer son argent ?
+            </p>
             <ul>
                 <li>Que ce soit ton argent de poche, ton salaire de petit job ou tes économies, <strong>chaque franc compte</strong></li>
                 <li>Aujourd'hui, il est super facile de dépenser : un clic, une carte, et hop !</li>
@@ -37,20 +86,20 @@
                 <li>De mauvaises décisions peuvent t'empêcher de réaliser tes projets (permis de conduire, voyages, études...)</li>
             </ul>
             
-            <p class="intro-title">📚 Ce que tu vas découvrir sur cette page :</p>
+            <p class="intro-title"><i data-feather="book-open"></i> Ce que tu vas découvrir sur cette page :</p>
             <ul>
                 <li>Les <strong>mauvais réflexes</strong> qui peuvent te mettre dans le rouge (crédit à la consommation, leasing, carte de crédit)</li>
                 <li>Les <strong>bons réflexes</strong> pour économiser, dépenser intelligemment et garder le contrôle de tes finances</li>
                 <li>Des <strong>quiz et jeux interactifs</strong> pour tester tes connaissances de manière ludique</li>
             </ul>
-            <p class="intro-cta">Prêt·e à devenir un·e pro de la gestion d'argent ? C'est parti ! 🚀</p>
+            <p class="intro-cta">Prêt·e à devenir un·e pro de la gestion d'argent ? C'est parti !</p>
         </section>
         </div>
 
         <!-- Onglet Quiz de départ -->
         <div class="tab-content" id="tab-quiz-depart">
             <section class="quiz-section">
-            <h2 class="quiz-title">🎯 Quiz : où en es-tu dans tes connaissances de base ?</h2>
+            <h2 class="quiz-title"><i data-feather="target"></i> Quiz : où en es-tu dans tes connaissances de base ?</h2>
             <p class="quiz-intro">Avant de découvrir tous les conseils ci-dessous, voyons où tu en es ! 5 questions pour tester tes connaissances de base en gestion d'argent.</p>
             
             <div id="quiz-container">
@@ -112,8 +161,8 @@
                 <div id="quiz-result" class="quiz-result" style="display: none;">
                     <h3 id="result-score"></h3>
                     <p id="result-message"></p>
-                    <p class="result-cta">📚 <strong>Découvre maintenant tous les conseils ci-dessous pour devenir un·e pro de la gestion d'argent !</strong></p>
-                    <button id="restart-quiz" class="quiz-button restart">🔄 Recommencer le quiz</button>
+                    <p class="result-cta"><i data-feather="book-open" style="width: 20px; height: 20px; vertical-align: middle; margin-right: 8px;"></i> <strong>Découvre maintenant tous les conseils ci-dessous pour devenir un·e pro de la gestion d'argent !</strong></p>
+                    <button id="restart-quiz" class="quiz-button restart"><i data-feather="rotate-cw" style="width: 18px; height: 18px; vertical-align: middle; margin-right: 6px;"></i> Recommencer le quiz</button>
                 </div>
             </div>
         </section>
@@ -121,23 +170,34 @@
 
         <!-- Onglet Mauvais réflexes -->
         <div class="tab-content" id="tab-mauvais">
-            <h2 class="tab-page-title">⚠️ Les mauvais réflexes financiers</h2>
+            <h2 class="tab-page-title">
+                <i data-feather="alert-triangle" style="width: 32px; height: 32px; color: var(--color-coral); vertical-align: middle; margin-right: 12px;"></i>
+                Les mauvais réflexes financiers
+            </h2>
             <p class="tab-page-intro">Découvre les pièges financiers à éviter absolument pour protéger ton avenir.</p>
+            
+            <!-- Image illustrative -->
+            <div class="section-image" style="max-width: 600px; margin: 30px auto;">
+                <img src="images/argent-envole.png" alt="L'argent qui s'envole - dépenser sans réfléchir" style="width: 100%; height: auto; border-radius: 20px; box-shadow: 0 4px 16px rgba(0,0,0,0.08);">
+            </div>
         
             <section class="card">
-            <h3>💳 Le crédit à la consommation</h3>
+            <h3>
+                <i data-feather="credit-card" style="width: 24px; height: 24px; color: var(--color-coral); vertical-align: middle; margin-right: 8px;"></i>
+                Le crédit à la consommation
+            </h3>
             <p>
                 Le crédit à la consommation, c'est quand tu empruntes de l'argent à une banque ou un magasin 
                 pour acheter quelque chose tout de suite (un smartphone, des vêtements, une console...), 
                 mais que tu dois rembourser petit à petit, avec des <strong>intérêts en plus</strong>.
             </p>
             
-            <h4>✅ Avantage :</h4>
+            <h4><i data-feather="check-circle" style="width: 18px; height: 18px; color: var(--color-soft-green); vertical-align: middle; margin-right: 6px;"></i> Avantage :</h4>
             <ul>
                 <li>Tu peux acheter quelque chose immédiatement sans avoir tout l'argent</li>
             </ul>
             
-            <h4>❌ Inconvénients :</h4>
+            <h4><i data-feather="x-circle" style="width: 18px; height: 18px; color: var(--color-danger); vertical-align: middle; margin-right: 6px;"></i> Inconvénients :</h4>
             <ul>
                 <li>Tu paies <strong>beaucoup plus cher</strong> que le prix initial avec les intérêts</li>
                 <li>Exemple : un téléphone à 1000 francs peut te coûter <strong>1300 francs au final</strong>
@@ -149,18 +209,21 @@
         </section>
 
         <section class="card">
-            <h3>🚗 Le leasing</h3>
+            <h3>
+                <i data-feather="truck" style="width: 24px; height: 24px; color: var(--color-coral); vertical-align: middle; margin-right: 8px;"></i>
+                Le leasing
+            </h3>
             <p>
                 Le leasing, c'est comme louer quelque chose (souvent une voiture ou un téléphone) en payant 
                 chaque mois, avec l'idée de peut-être l'acheter à la fin.
             </p>
             
-            <h4>✅ Avantage :</h4>
+            <h4><i data-feather="check-circle" style="width: 18px; height: 18px; color: var(--color-soft-green); vertical-align: middle; margin-right: 6px;"></i> Avantage :</h4>
             <ul>
                 <li>Tu peux conduire un véhicule récent sans avoir besoin de tout l'argent d'un coup</li>
             </ul>
             
-            <h4>❌ Inconvénients :</h4>
+            <h4><i data-feather="x-circle" style="width: 18px; height: 18px; color: var(--color-danger); vertical-align: middle; margin-right: 6px;"></i> Inconvénients :</h4>
             <ul>
                 <li>Tu paies chaque mois sans <strong>jamais vraiment être propriétaire</strong></li>
                 <li>Tu dois respecter des <strong>règles strictes</strong> (kilomètres limités, pas de modifications)</li>
@@ -172,20 +235,23 @@
         </section>
 
         <section class="card">
-            <h3>💳 La carte de crédit</h3>
+            <h3>
+                <i data-feather="credit-card" style="width: 24px; height: 24px; color: var(--color-coral); vertical-align: middle; margin-right: 8px;"></i>
+                La carte de crédit
+            </h3>
             <p>
                 La carte de crédit permet d'acheter maintenant et de payer plus tard. À la fin du mois, 
                 tu peux choisir de tout rembourser ou de payer petit à petit. Ça semble pratique pour 
                 gérer son argent, mais c'est un outil risqué si on ne fait pas attention !
             </p>
             
-            <h4>✅ Avantages :</h4>
+            <h4><i data-feather="check-circle" style="width: 18px; height: 18px; color: var(--color-soft-green); vertical-align: middle; margin-right: 6px;"></i> Avantages :</h4>
             <ul>
                 <li>Pratique pour les achats en ligne et à l'étranger</li>
                 <li>Si tu rembourses tout chaque mois, pas d'intérêts</li>
             </ul>
             
-            <h4>❌ Inconvénients :</h4>
+            <h4><i data-feather="x-circle" style="width: 18px; height: 18px; color: var(--color-danger); vertical-align: middle; margin-right: 6px;"></i> Inconvénients :</h4>
             <ul>
                 <li>Si tu ne paies pas tout, les <strong>intérêts sont énormes</strong> (parfois 15-20% !)</li>
                 <li>C'est <strong>facile de dépenser trop</strong> car l'argent ne sort pas tout de suite</li>
@@ -197,19 +263,22 @@
         </section>
 
         <section class="card">
-            <h3>📱 Suivre les influenceurs et la mode</h3>
+            <h3>
+                <i data-feather="smartphone" style="width: 24px; height: 24px; color: var(--color-coral); vertical-align: middle; margin-right: 8px;"></i>
+                Suivre les influenceurs et la mode
+            </h3>
             <p>
                 Sur les réseaux sociaux, tu vois des influenceurs avec les dernières baskets, le dernier téléphone, 
                 les vêtements de marque... Ça donne envie d'acheter la même chose pour être "à la mode" et ressembler 
                 à tes idoles. Mais attention, c'est un piège qui peut te coûter très cher !
             </p>
             
-            <h4>✅ Avantage :</h4>
+            <h4><i data-feather="check-circle" style="width: 18px; height: 18px; color: var(--color-soft-green); vertical-align: middle; margin-right: 6px;"></i> Avantage :</h4>
             <ul>
                 <li>Tu es à la mode et tu te sens bien avec les dernières tendances</li>
             </ul>
             
-            <h4>❌ Inconvénients :</h4>
+            <h4><i data-feather="x-circle" style="width: 18px; height: 18px; color: var(--color-danger); vertical-align: middle; margin-right: 6px;"></i> Inconvénients :</h4>
             <ul>
                 <li>Les tendances changent <strong>toutes les semaines</strong>, tu veux toujours acheter quelque chose de nouveau</li>
                 <li>Les produits "influenceurs" sont souvent <strong>très chers</strong> pour ce qu'ils sont</li>
@@ -224,17 +293,28 @@
 
         <!-- Onglet Bons réflexes -->
         <div class="tab-content" id="tab-bons">
-            <h2 class="tab-page-title">✅ Les bons réflexes financiers</h2>
+            <h2 class="tab-page-title">
+                <i data-feather="check-circle" style="width: 32px; height: 32px; color: var(--color-soft-green); vertical-align: middle; margin-right: 12px;"></i>
+                Les bons réflexes financiers
+            </h2>
             <p class="tab-page-intro">Apprends les bonnes pratiques pour gérer ton argent intelligemment et construire ton avenir.</p>
             
+            <!-- Image illustrative -->
+            <div style="margin-bottom: 40px;">
+                <img src="https://images.unsplash.com/photo-1579621970795-87facc2f976d?w=800&q=80" alt="Bonne gestion financière" style="width: 100%; height: 250px; object-fit: cover; border-radius: 20px; box-shadow: 0 4px 16px rgba(0,0,0,0.08);">
+            </div>
+            
             <section class="card">
-            <h3>📊 Faire un budget (revenus - dépenses = reste)</h3>
+            <h3>
+                <i data-feather="pie-chart" style="width: 24px; height: 24px; color: var(--color-soft-green); vertical-align: middle; margin-right: 8px;"></i>
+                Faire un budget (revenus - dépenses = reste)
+            </h3>
             <p>
                 Un budget, c'est un petit calcul simple pour savoir où va ton argent. Tu notes ce que tu 
                 reçois (revenus : argent de poche, job...) et ce que tu dépenses (sorties, jeux, vêtements...). 
                 La différence, c'est ce qu'il te reste pour économiser ou pour les imprévus.
             </p>
-            <h4>💡 Pourquoi c'est important :</h4>
+            <h4><i data-feather="zap" style="width: 18px; height: 18px; color: var(--color-warning); vertical-align: middle; margin-right: 6px;"></i> Pourquoi c'est important :</h4>
             <ul>
                 <li>Tu sais <strong>exactement combien tu as</strong> et combien tu peux dépenser</li>
                 <li>Tu évites les <strong>mauvaises surprises</strong> en fin de mois</li>
@@ -246,13 +326,16 @@
         </section>
 
         <section class="card">
-            <h3>⏰ Attendre quelques jours avant un achat important (le temps de réfléchir)</h3>
+            <h3>
+                <i data-feather="clock" style="width: 24px; height: 24px; color: var(--color-soft-green); vertical-align: middle; margin-right: 8px;"></i>
+                Attendre quelques jours avant un achat important (le temps de réfléchir)
+            </h3>
             <p>
                 Avant d'acheter quelque chose de cher, prends quelques jours pour y réfléchir. Laisse passer 
                 l'excitation du moment et demande-toi : "Est-ce que j'en ai vraiment besoin ?" Souvent, après 
                 quelques jours, on se rend compte qu'on peut s'en passer !
             </p>
-            <h4>💡 Pourquoi c'est important :</h4>
+            <h4><i data-feather="zap" style="width: 18px; height: 18px; color: var(--color-warning); vertical-align: middle; margin-right: 6px;"></i> Pourquoi c'est important :</h4>
             <ul>
                 <li>Tu évites les <strong>achats impulsifs</strong> que tu regretteras plus tard</li>
                 <li>Tu as le temps de <strong>comparer les prix</strong> et trouver de meilleures offres</li>
@@ -264,13 +347,16 @@
         </section>
 
         <section class="card">
-            <h3>🐷 Économiser petit à petit pour les gros achats</h3>
+            <h3>
+                <i data-feather="trending-up" style="width: 24px; height: 24px; color: var(--color-soft-green); vertical-align: middle; margin-right: 8px;"></i>
+                Économiser petit à petit pour les gros achats
+            </h3>
             <p>
                 Au lieu d'acheter immédiatement avec un crédit, mets de l'argent de côté régulièrement. 
                 Même 10 ou 20 francs par semaine, ça s'accumule ! En quelques mois, tu auras assez pour 
                 t'acheter ce que tu veux, sans payer d'intérêts.
             </p>
-            <h4>💡 Pourquoi c'est important :</h4>
+            <h4><i data-feather="zap" style="width: 18px; height: 18px; color: var(--color-warning); vertical-align: middle; margin-right: 6px;"></i> Pourquoi c'est important :</h4>
             <ul>
                 <li>Tu paies le <strong>prix réel</strong>, sans intérêts en plus</li>
                 <li>Tu apprécies davantage ce que tu achètes car <strong>tu as fait l'effort</strong> d'économiser</li>
@@ -282,13 +368,16 @@
         </section>
 
         <section class="card">
-            <h3>📝 Ne pas signer un contrat qu'on ne comprend pas</h3>
+            <h3>
+                <i data-feather="file-text" style="width: 24px; height: 24px; color: var(--color-soft-green); vertical-align: middle; margin-right: 8px;"></i>
+                Ne pas signer un contrat qu'on ne comprend pas
+            </h3>
             <p>
                 Un contrat (crédit, abonnement, leasing...), c'est un engagement sérieux. Si tu ne comprends 
                 pas tout ce qui est écrit, ou si on te pousse à signer vite "sans te poser de questions", 
                 c'est un gros drapeau rouge ! Ne signe JAMAIS quelque chose que tu ne comprends pas.
             </p>
-            <h4>💡 Pourquoi c'est important :</h4>
+            <h4><i data-feather="zap" style="width: 18px; height: 18px; color: var(--color-warning); vertical-align: middle; margin-right: 6px;"></i> Pourquoi c'est important :</h4>
             <ul>
                 <li>Les contrats contiennent souvent des <strong>frais cachés</strong> et des pièges</li>
                 <li>Tu t'engages parfois pour <strong>plusieurs années</strong></li>
@@ -300,13 +389,16 @@
         </section>
 
         <section class="card">
-            <h3>👥 Parler à un adulte de confiance en cas de doute</h3>
+            <h3>
+                <i data-feather="users" style="width: 24px; height: 24px; color: var(--color-soft-green); vertical-align: middle; margin-right: 8px;"></i>
+                Parler à un adulte de confiance en cas de doute
+            </h3>
             <p>
                 Si quelqu'un te propose un crédit, un contrat ou un "super deal", et que tu ne sais pas 
                 quoi faire, parles-en à un adulte de confiance (parents, tuteur, conseiller...). Ils ont 
                 plus d'expérience et peuvent t'aider à voir les pièges que tu ne vois pas.
             </p>
-            <h4>💡 Pourquoi c'est important :</h4>
+            <h4><i data-feather="zap" style="width: 18px; height: 18px; color: var(--color-warning); vertical-align: middle; margin-right: 6px;"></i> Pourquoi c'est important :</h4>
             <ul>
                 <li>Les adultes ont souvent <strong>déjà vécu</strong> ces situations</li>
                 <li>Ils peuvent repérer les <strong>arnaques</strong> et les mauvaises offres</li>
@@ -318,49 +410,175 @@
         </section>
         </div>
         
+        <!-- Onglet Conseils Pratiques -->
+        <div class="tab-content" id="tab-conseils">
+            <h2 class="tab-page-title">
+                <i data-feather="compass" style="width: 32px; height: 32px; color: var(--color-warning); vertical-align: middle; margin-right: 12px;"></i>
+                Conseils pratiques pour gérer ton argent
+            </h2>
+            <p class="tab-page-intro">Des astuces concrètes et faciles à appliquer au quotidien pour éviter les galères financières et garder le contrôle de ton budget.</p>
+            
+            <!-- Image illustrative -->
+            <div class="section-image">
+                <img src="https://images.unsplash.com/photo-1559526324-593bc073d938?w=1200&q=80" alt="Planification et organisation financière">
+            </div>
+
+            <!-- Conseils organisés par catégories -->
+            
+            <!-- Catégorie 1 : Au quotidien -->
+            <section class="card" style="border-left: 5px solid var(--color-soft-blue);">
+                <h3 style="color: var(--color-soft-blue);">
+                    <i data-feather="calendar" style="width: 28px; height: 28px; vertical-align: middle; margin-right: 10px;"></i>
+                    Au quotidien
+                </h3>
+                <ul style="margin-top: 20px;">
+                    <li><strong style="color: var(--color-soft-blue);">Note toutes tes dépenses</strong> : Utilise une app ou un carnet pour suivre où part ton argent. Ça aide à repérer les dépenses inutiles et à mieux gérer ton budget.</li>
+                    
+                    <li><strong style="color: var(--color-soft-blue);">Fais une liste avant d'acheter</strong> : Que ce soit pour les courses ou le shopping, une liste t'empêche d'acheter sur un coup de tête. Tu économises et tu ne ramènes que ce dont tu as besoin.</li>
+                    
+                    <li><strong style="color: var(--color-soft-blue);">Limite les petites dépenses</strong> : Un café par jour = 120 CHF/mois, un snack = 90 CHF/mois. Ces petites sommes s'accumulent très vite !</li>
+                </ul>
+            </section>
+
+            <!-- Catégorie 2 : Pour économiser -->
+            <section class="card" style="border-left: 5px solid var(--color-soft-green);">
+                <h3 style="color: var(--color-soft-green);">
+                    <i data-feather="trending-up" style="width: 28px; height: 28px; vertical-align: middle; margin-right: 10px;"></i>
+                    Pour économiser
+                </h3>
+                <ul style="margin-top: 20px;">
+                    <li><strong style="color: var(--color-soft-green);">La règle des 50/30/20</strong> : 50% de ton argent pour tes besoins essentiels (transports, nourriture), 30% pour tes envies (sorties, loisirs), et 20% à économiser. Simple et super efficace !</li>
+                    
+                    <li><strong style="color: var(--color-soft-green);">Économise dès que tu reçois</strong> : Mets de côté AVANT de dépenser, pas avec ce qui reste à la fin du mois. Tu économiseras beaucoup plus comme ça !</li>
+                    
+                    <li><strong style="color: var(--color-soft-green);">Fixe-toi des objectifs précis</strong> : Avoir un but concret (voyage, console, vélo...) motive à économiser et rend l'effort beaucoup plus facile. Tu sais pourquoi tu le fais !</li>
+                </ul>
+            </section>
+
+            <!-- Catégorie 3 : Avant d'acheter -->
+            <section class="card" style="border-left: 5px solid var(--color-coral);">
+                <h3 style="color: var(--color-coral);">
+                    <i data-feather="alert-circle" style="width: 28px; height: 28px; vertical-align: middle; margin-right: 10px;"></i>
+                    Avant d'acheter
+                </h3>
+                <ul style="margin-top: 20px;">
+                    <li><strong style="color: var(--color-coral);">Attends 48 heures</strong> : Pour tout achat de plus de 50 CHF, attends 2 jours avant d'acheter. Si tu y penses encore après, alors vas-y. Sinon, c'était juste une envie passagère !</li>
+                    
+                    <li><strong style="color: var(--color-coral);">Compare les prix</strong> : Utilise des comparateurs en ligne ou va voir dans plusieurs magasins. Tu peux facilement économiser 20-30% en cherchant un peu !</li>
+                    
+                    <li><strong style="color: var(--color-coral);">Pose-toi 3 questions</strong> : J'en ai vraiment BESOIN ou juste envie ? Je peux me le permettre ? Est-ce qu'il y a moins cher ailleurs ? Si une réponse est non, n'achète pas.</li>
+                </ul>
+            </section>
+
+            <!-- Catégorie 4 : Pour éviter les pièges -->
+            <section class="card" style="border-left: 5px solid var(--color-warning);">
+                <h3 style="color: var(--color-warning);">
+                    <i data-feather="shield" style="width: 28px; height: 28px; vertical-align: middle; margin-right: 10px;"></i>
+                    Pour éviter les pièges
+                </h3>
+                <ul style="margin-top: 20px;">
+                    <li><strong style="color: var(--color-warning);">Méfie-toi des "promos"</strong> : Une réduction de -70% ne sert à rien si tu n'avais pas prévu d'acheter ce truc. C'est 100% de dépense en PLUS dans ton budget !</li>
+                    
+                    <li><strong style="color: var(--color-warning);">Évite TOUS les crédits</strong> : Si tu dois emprunter de l'argent pour l'acheter, c'est que tu n'as pas les moyens. Point final. Attends d'avoir économisé assez.</li>
+                    
+                    <li><strong style="color: var(--color-warning);">Ignore les influenceurs</strong> : Ils sont PAYÉS pour vendre des produits. Ce qui leur va ne te va pas forcément, et surtout pas à ton budget ! Ne te laisse pas influencer.</li>
+                    
+                    <li><strong style="color: var(--color-warning);">Fais attention aux abonnements</strong> : 10 CHF/mois = 120 CHF/an. Multiplie par 5 abonnements et c'est 600 CHF par an qui partent ! Garde seulement ceux que tu utilises vraiment.</li>
+                </ul>
+            </section>
+
+            <!-- Catégorie 5 : En cas de difficulté -->
+            <section class="card" style="border-left: 5px solid var(--color-danger);">
+                <h3 style="color: var(--color-danger);">
+                    <i data-feather="life-buoy" style="width: 28px; height: 28px; vertical-align: middle; margin-right: 10px;"></i>
+                    En cas de difficulté
+                </h3>
+                <ul style="margin-top: 20px;">
+                    <li><strong style="color: var(--color-danger);">Parle-en TOUT DE SUITE</strong> : Dis à tes parents ou un adulte de confiance si tu as des soucis d'argent. Plus tôt tu en parles, plus c'est facile à régler. Attendre empire toujours la situation.</li>
+                    
+                    <li><strong style="color: var(--color-danger);">Contacte une association d'aide</strong> : Des services gratuits existent pour aider les jeunes en difficulté financière (Pro Juventute, centres sociaux...). N'aie pas honte, c'est fait pour ça !</li>
+                    
+                    <li><strong style="color: var(--color-danger);">Fais un plan de redressement</strong> : Liste toutes tes dettes, tous tes revenus, et fais un budget réaliste. Coupe toutes les dépenses non essentielles et suis ton plan à la lettre. Ça marche !</li>
+                </ul>
+            </section>
+
+            <!-- Conseil en OR -->
+            <div class="warning" style="background: linear-gradient(135deg, #f6d365 0%, #fda085 100%); color: white; text-align: center; padding: 40px; margin-top: 40px; border-left: 5px solid #fda085;">
+                <h3 style="font-size: 1.8em; color: white; margin-bottom: 15px;">
+                    <i data-feather="award" style="width: 32px; height: 32px; vertical-align: middle; margin-right: 10px;"></i>
+                    Le conseil en OR
+                </h3>
+                <p style="font-size: 1.4em; line-height: 1.8; color: white; font-weight: 600; margin: 20px 0;">
+                    « Si tu ne peux pas l'acheter deux fois, c'est que tu ne peux pas te le permettre. »
+                </p>
+                <p style="font-size: 1.05em; opacity: 0.95; color: white;">
+                    Cette règle simple t'évitera 90% des problèmes financiers !
+                </p>
+            </div>
+        </div>
+        
         <!-- Onglet Conséquences -->
         <div class="tab-content" id="tab-consequences">
+            <h2 class="tab-page-title">
+                <i data-feather="alert-circle" style="width: 32px; height: 32px; color: var(--color-coral); vertical-align: middle; margin-right: 12px;"></i>
+                Comprendre les conséquences financières
+            </h2>
+            <p class="tab-page-intro">Avant d'aller plus loin, voici des explications concrètes sur ce qui peut t'arriver si tu accumules des dettes. Ces termes peuvent sembler compliqués, mais il est important de les comprendre.</p>
+        
+        <!-- Image illustrative -->
+        <div class="section-image" style="max-width: 700px; margin: 30px auto;">
+            <img src="images/facturesurcharge.png" alt="Factures et surcharges - les conséquences des dettes" style="width: 100%; height: auto; border-radius: 20px; box-shadow: 0 4px 16px rgba(0,0,0,0.08);">
+        </div>
+        
         <!-- Encadrés explicatifs sur les dettes et poursuites -->
         <section class="info-block-container">
-            <h2 class="info-main-title">📚 Comprendre les conséquences financières</h2>
-            <p class="info-intro">Avant d'aller plus loin, voici des explications concrètes sur ce qui peut t'arriver si tu accumules des dettes. Ces termes peuvent sembler compliqués, mais il est important de les comprendre.</p>
 
             <!-- Encadré 1 : Explications des termes -->
             <div class="info-block definition-block">
-                <h3>📖 C'est quoi exactement ces termes ?</h3>
+                <h3><i data-feather="book" style="width: 24px; height: 24px; color: var(--color-soft-blue); vertical-align: middle; margin-right: 8px;"></i> C'est quoi exactement ces termes ?</h3>
                 
                 <div class="definition-item">
-                    <h4>🔔 Le commandement de payer</h4>
+                    <h4><i data-feather="bell" style="width: 18px; height: 18px; color: var(--color-warning); vertical-align: middle; margin-right: 6px;"></i> Le commandement de payer</h4>
                     <p>C'est la <strong>première lettre officielle</strong> que tu reçois quand tu ne paies pas une dette. C'est comme un avertissement formel : "Tu dois payer, sinon on passe aux choses sérieuses". Cette lettre est déjà enregistrée dans ton dossier.</p>
                 </div>
 
                 <div class="definition-item">
-                    <h4>⚖️ La poursuite</h4>
+                    <h4><i data-feather="alert-triangle" style="width: 18px; height: 18px; color: var(--color-danger); vertical-align: middle; margin-right: 6px;"></i> La poursuite</h4>
                     <p>Si tu ne paies toujours pas, l'entreprise ou la banque lance une <strong>poursuite officielle</strong>. C'est une procédure légale qui est inscrite dans <strong>l'extrait du registre des poursuites</strong> pendant au minimum <strong>5 ans</strong>. Tout le monde peut voir que tu as eu des problèmes d'argent (propriétaires, employeurs, banques).</p>
                 </div>
 
                 <div class="definition-item">
-                    <h4>📋 L'extrait du registre des poursuites</h4>
+                    <h4><i data-feather="file-text" style="width: 18px; height: 18px; color: var(--color-text); vertical-align: middle; margin-right: 6px;"></i> L'extrait du registre des poursuites</h4>
                     <p>C'est un <strong>document officiel</strong> que n'importe qui peut demander te concernant. Il montre toutes tes poursuites et tes ADB des dernières années. Les propriétaires, les banques et certains employeurs le demandent systématiquement. Un extrait "propre" (sans poursuites) est essentiel pour ta vie d'adulte.</p>
                 </div>
 
                 <div class="definition-item adb-highlight">
-                    <h4>🚨 L'acte de défaut de biens (ADB)</h4>
+                    <h4><i data-feather="alert-octagon" style="width: 18px; height: 18px; color: var(--color-danger); vertical-align: middle; margin-right: 6px;"></i> L'acte de défaut de biens (ADB)</h4>
                     <p>C'est le <strong>niveau le plus grave</strong>. Un ADB signifie que tu as été poursuivi, qu'un huissier est venu vérifier chez toi, et qu'il a constaté officiellement que <strong>tu n'as pas d'argent ni de biens</strong> pour payer ta dette. Cet ADB reste visible <strong>20 ANS</strong> sur ton extrait si tu ne paies pas ! C'est un gros handicap pour ton avenir.</p>
                 </div>
 
                 <div class="definition-item">
-                    <h4>💰 La saisie sur salaire</h4>
+                    <h4><i data-feather="dollar-sign" style="width: 18px; height: 18px; color: var(--color-danger); vertical-align: middle; margin-right: 6px;"></i> La saisie sur salaire</h4>
                     <p>Si tu as un salaire et que tu ne paies pas tes dettes, l'huissier peut demander à ton employeur de <strong>prélever directement une partie de ton salaire</strong> chaque mois (jusqu'à 50% dans certains cas !). Tu reçois ton salaire déjà amputé. Imagine : tu gagnes 2000 francs, mais tu n'en reçois que 1000.</p>
+                </div>
+
+                <div class="definition-item">
+                    <h4><i data-feather="user" style="width: 18px; height: 18px; color: var(--color-text); vertical-align: middle; margin-right: 6px;"></i> L'huissier</h4>
+                    <p>C'est un <strong>officier public</strong> (comme un policier mais pour les dettes) qui a le droit de venir chez toi pour constater ce que tu possèdes et saisir tes biens si tu ne paies pas. Il peut aussi <strong>bloquer ton salaire</strong> directement avec ton employeur. L'huissier agit sur ordre de la justice, tu ne peux pas refuser de le recevoir.</p>
+                </div>
+
+                <div class="definition-item">
+                    <h4><i data-feather="home" style="width: 18px; height: 18px; color: var(--color-text); vertical-align: middle; margin-right: 6px;"></i> Le mois de caution</h4>
+                    <p>Quand tu loues un appartement, le propriétaire te demande une <strong>garantie financière</strong> (en général 2-3 mois de loyer) qu'il garde "en otage" pendant toute la durée de ton bail. Si tu ne paies pas ton loyer ou si tu casses quelque chose, il peut utiliser cet argent. Si tu as des poursuites, les propriétaires demandent souvent <strong>beaucoup plus</strong> (jusqu'à 6 mois !) car ils te font moins confiance.</p>
                 </div>
             </div>
 
             <!-- Encadré 2 : Conséquences concrètes -->
             <div class="info-block consequences-block">
-                <h3>🎯 Les conséquences concrètes au quotidien</h3>
+                <h3><i data-feather="alert-circle" style="width: 24px; height: 24px; color: var(--color-warning); vertical-align: middle; margin-right: 8px;"></i> Les conséquences concrètes au quotidien</h3>
                 
                 <div class="consequence-category">
-                    <h4>🏠 Trouver un logement</h4>
+                    <h4><i data-feather="home" style="width: 18px; height: 18px; color: var(--color-text); vertical-align: middle; margin-right: 6px;"></i> Trouver un logement</h4>
                     <ul>
                         <li>Les propriétaires demandent <strong>systématiquement</strong> ton extrait du registre</li>
                         <li>Avec des poursuites ou un ADB : <strong>refus quasi-automatique</strong></li>
@@ -370,7 +588,7 @@
                 </div>
 
                 <div class="consequence-category">
-                    <h4>💼 Travailler</h4>
+                    <h4><i data-feather="briefcase" style="width: 18px; height: 18px; color: var(--color-text); vertical-align: middle; margin-right: 6px;"></i> Travailler</h4>
                     <ul>
                         <li>Les métiers de la <strong>banque, assurance, comptabilité</strong> exigent souvent un extrait vierge</li>
                         <li>Certains <strong>apprentissages</strong> peuvent être annulés si l'entreprise découvre tes dettes</li>
@@ -380,7 +598,7 @@
                 </div>
 
                 <div class="consequence-category">
-                    <h4>💳 Gérer ton argent</h4>
+                    <h4><i data-feather="credit-card" style="width: 18px; height: 18px; color: var(--color-text); vertical-align: middle; margin-right: 6px;"></i> Gérer ton argent</h4>
                     <ul>
                         <li><strong>Aucune banque</strong> ne t'accordera de crédit</li>
                         <li><strong>Pas de carte de crédit</strong>, parfois même pas de carte bancaire normale</li>
@@ -390,7 +608,7 @@
                 </div>
 
                 <div class="consequence-category">
-                    <h4>🎓 Réaliser tes projets</h4>
+                    <h4><i data-feather="award" style="width: 18px; height: 18px; color: var(--color-text); vertical-align: middle; margin-right: 6px;"></i> Réaliser tes projets</h4>
                     <ul>
                         <li>Difficile d'obtenir un <strong>prêt étudiant</strong> pour tes études</li>
                         <li>Impossible de <strong>créer une entreprise</strong> (pas de crédit de démarrage)</li>
@@ -454,31 +672,31 @@
                         <p>Le temps moyen pour trouver un appartement quand tu as des poursuites (au lieu de 2-4 semaines)</p>
                     </div>
                 </div>
-                <p class="duration-note">💡 <strong>Pour te donner une idée :</strong> Si tu as 16 ans et que tu accumules des dettes qui mènent à un ADB, tu peux être impacté jusqu'à tes 36 ans. C'est toute ta jeunesse et le début de ta vie adulte.</p>
+                <p class="duration-note"><i data-feather="info" style="width: 18px; height: 18px; vertical-align: middle; margin-right: 6px;"></i> <strong>Pour te donner une idée :</strong> Si tu as 16 ans et que tu accumules des dettes qui mènent à un ADB, tu peux être impacté jusqu'à tes 36 ans. C'est toute ta jeunesse et le début de ta vie adulte.</p>
             </div>
 
             <!-- Encadré 5 : Solutions -->
             <div class="info-block solution-block-main">
-                <h3>✅ Tu es en difficulté ? Voici quoi faire</h3>
+                <h3><i data-feather="help-circle" style="width: 24px; height: 24px; color: var(--color-soft-green); vertical-align: middle; margin-right: 8px;"></i> Tu es en difficulté ? Voici quoi faire</h3>
                 <p class="solution-intro">Si tu as déjà des dettes ou que tu sens que ça devient compliqué, <strong>ne panique pas</strong> et ne reste surtout pas seul·e !</p>
                 
                 <div class="solution-steps">
                     <div class="solution-step">
-                        <h4>1️⃣ Ne fais JAMAIS ça</h4>
+                        <h4><i data-feather="x-circle" style="width: 18px; height: 18px; color: var(--color-danger); vertical-align: middle; margin-right: 6px;"></i> Ne fais JAMAIS ça</h4>
                         <ul>
-                            <li><strong>❌ Prendre un crédit pour payer un autre crédit</strong> (tu doubles le problème)</li>
-                            <li><strong>❌ Ignorer les lettres</strong> (ça empire la situation)</li>
-                            <li><strong>❌ Cacher la situation</strong> à tes parents ou tuteurs</li>
+                            <li><strong>Prendre un crédit pour payer un autre crédit</strong> (tu doubles le problème)</li>
+                            <li><strong>Ignorer les lettres</strong> (ça empire la situation)</li>
+                            <li><strong>Cacher la situation</strong> à tes parents ou tuteurs</li>
                         </ul>
                     </div>
                     
                     <div class="solution-step">
-                        <h4>2️⃣ Fais ça TOUT DE SUITE</h4>
+                        <h4><i data-feather="check-circle" style="width: 18px; height: 18px; color: var(--color-soft-green); vertical-align: middle; margin-right: 6px;"></i> Fais ça TOUT DE SUITE</h4>
                         <ul>
-                            <li><strong>✅ Parle-en à un adulte de confiance</strong> (parents, tuteur, enseignant)</li>
-                            <li><strong>✅ Contacte un service de conseil en désendettement</strong> (gratuit en Suisse)</li>
-                            <li><strong>✅ Liste toutes tes dettes</strong> et tes revenus pour avoir une vue claire</li>
-                            <li><strong>✅ Contacte tes créanciers</strong> pour établir un plan de paiement réaliste</li>
+                            <li><strong>Parle-en à un adulte de confiance</strong> (parents, tuteur, enseignant)</li>
+                            <li><strong>Contacte un service de conseil en désendettement</strong> (gratuit en Suisse)</li>
+                            <li><strong>Liste toutes tes dettes</strong> et tes revenus pour avoir une vue claire</li>
+                            <li><strong>Contacte tes créanciers</strong> pour établir un plan de paiement réaliste</li>
                         </ul>
                     </div>
                 </div>
@@ -495,30 +713,83 @@
             </div>
 
             <div class="final-message">
-                <p>💡 <strong>Rappelle-toi :</strong> Comprendre tout ça, ce n'est pas pour te faire peur, mais pour te donner le pouvoir de faire les bons choix. Éviter les dettes, c'est protéger ta liberté et ton avenir. Et si tu as déjà des difficultés, il n'est jamais trop tard pour demander de l'aide !</p>
+                <p><i data-feather="info" style="width: 18px; height: 18px; vertical-align: middle; margin-right: 6px;"></i> <strong>Rappelle-toi :</strong> Comprendre tout ça, ce n'est pas pour te faire peur, mais pour te donner le pouvoir de faire les bons choix. Éviter les dettes, c'est protéger ta liberté et ton avenir. Et si tu as déjà des difficultés, il n'est jamais trop tard pour demander de l'aide !</p>
             </div>
         </section>
         </div>
         
         <!-- Onglet Jeu -->
         <div class="tab-content" id="tab-jeu">
-            <section class="game-section">
-                <h2 class="game-title">🎮 Le Défi du Mois</h2>
+            <!-- Image illustrative -->
+            <div class="section-image">
+                <img src="https://images.unsplash.com/photo-1556742044-3c52d6e88c62?w=1200&q=80" alt="Jeu et challenge">
+            </div>
+            
+            <!-- Sélecteur de jeux -->
+            <div class="games-selector">
+                <h2 style="text-align: center; margin-bottom: 30px; color: var(--color-dark);">
+                    <i data-feather="zap" style="width: 32px; height: 32px; vertical-align: middle; margin-right: 10px; color: var(--color-soft-blue);"></i>
+                    Choisis ton jeu !
+                </h2>
+                <div class="games-grid">
+                    <div class="game-card" onclick="showGame('defi')">
+                        <div class="game-card-icon">
+                            <i data-feather="target" style="width: 48px; height: 48px;"></i>
+                        </div>
+                        <h3>Le Défi du Mois</h3>
+                        <p>Gère ton budget pendant 30 jours et fais les bons choix financiers</p>
+                        <div class="game-card-footer">
+                            <span class="game-duration"><i data-feather="clock" style="width: 16px; height: 16px; vertical-align: middle;"></i> 5-7 min</span>
+                        </div>
+                    </div>
+                    
+                    <div class="game-card" onclick="showGame('mythes')">
+                        <div class="game-card-icon" style="background: linear-gradient(135deg, var(--color-coral), var(--color-warning));">
+                            <i data-feather="help-circle" style="width: 48px; height: 48px;"></i>
+                        </div>
+                        <h3>Vrai ou Faux ?</h3>
+                        <p>Démêle le vrai du faux sur les mythes de l'argent</p>
+                        <div class="game-card-footer">
+                            <span class="game-duration"><i data-feather="clock" style="width: 16px; height: 16px; vertical-align: middle;"></i> 2-3 min</span>
+                        </div>
+                    </div>
+                    
+                    <div class="game-card" onclick="showGame('tri')">
+                        <div class="game-card-icon" style="background: linear-gradient(135deg, #43e97b, #38f9d7);">
+                            <i data-feather="filter" style="width: 48px; height: 48px;"></i>
+                        </div>
+                        <h3>Tri des Dépenses</h3>
+                        <p>Classe rapidement les dépenses : Besoin, Envie, Piège ou Obligatoire ?</p>
+                        <div class="game-card-footer">
+                            <span class="game-duration"><i data-feather="clock" style="width: 16px; height: 16px; vertical-align: middle;"></i> 3-4 min</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Jeu 1 : Le Défi du Mois -->
+            <section class="game-section" id="game-defi" style="display: none;">
+                <button class="back-to-games" onclick="backToGamesMenu()">
+                    <i data-feather="arrow-left" style="width: 18px; height: 18px; vertical-align: middle; margin-right: 6px;"></i>
+                    Retour aux jeux
+                </button>
+                
+                <h2 class="game-title"><i data-feather="target"></i> Le Défi du Mois</h2>
                 <p class="game-intro">Gère ton budget pendant un mois ! Tu commences avec 800 francs. Des événements vont se produire et tu devras faire des choix. Arriveras-tu à la fin du mois sans être en négatif ?</p>
                 
                 <div id="game-container">
                     <!-- Tableau de bord -->
                     <div class="dashboard">
                         <div class="stat-card">
-                            <div class="stat-label">💰 Ton budget</div>
+                            <div class="stat-label"><i data-feather="dollar-sign" style="width: 18px; height: 18px; vertical-align: middle; margin-right: 6px;"></i> Ton budget</div>
                             <div class="stat-value" id="budget">800 CHF</div>
                         </div>
                         <div class="stat-card">
-                            <div class="stat-label">📅 Jour</div>
+                            <div class="stat-label"><i data-feather="calendar" style="width: 18px; height: 18px; vertical-align: middle; margin-right: 6px;"></i> Jour</div>
                             <div class="stat-value" id="day">1 / 30</div>
                         </div>
                         <div class="stat-card">
-                            <div class="stat-label">⭐ Score</div>
+                            <div class="stat-label"><i data-feather="star" style="width: 18px; height: 18px; vertical-align: middle; margin-right: 6px;"></i> Score</div>
                             <div class="stat-value" id="score">0</div>
                         </div>
                     </div>
@@ -530,11 +801,11 @@
                             <p>Tu as <strong>800 francs</strong> pour gérer un mois complet (30 jours).</p>
                             <p>Des événements vont se produire : certains bons, d'autres... moins ! À toi de faire les bons choix.</p>
                             <ul class="game-rules">
-                                <li>✅ <strong>Objectif</strong> : Finir le mois avec de l'argent</li>
-                                <li>💡 <strong>Bonus</strong> : Plus tu économises, plus ton score est élevé</li>
-                                <li>⚠️ <strong>Attention</strong> : Si tu tombes en négatif, c'est perdu !</li>
+                                <li><i data-feather="target" style="width: 16px; height: 16px; vertical-align: middle; margin-right: 6px;"></i> <strong>Objectif</strong> : Finir le mois avec de l'argent</li>
+                                <li><i data-feather="star" style="width: 16px; height: 16px; vertical-align: middle; margin-right: 6px;"></i> <strong>Bonus</strong> : Plus tu économises, plus ton score est élevé</li>
+                                <li><i data-feather="alert-triangle" style="width: 16px; height: 16px; color: var(--color-warning); vertical-align: middle; margin-right: 6px;"></i> <strong>Attention</strong> : Si tu tombes en négatif, c'est perdu !</li>
                             </ul>
-                            <button class="game-button primary" id="start-game">🚀 Commencer le défi</button>
+                            <button class="game-button primary" id="start-game"><i data-feather="play" style="width: 18px; height: 18px; vertical-align: middle; margin-right: 6px;"></i> Commencer le défi</button>
                         </div>
                     </div>
 
@@ -542,7 +813,7 @@
                     <div id="event-area" style="display: none;">
                         <div class="event-card">
                             <div class="event-day" id="event-day"></div>
-                            <div class="event-icon" id="event-icon">📅</div>
+                            <div class="event-icon" id="event-icon">💸</div>
                             <h3 id="event-title"></h3>
                             <p id="event-description"></p>
                             <div class="event-choices" id="event-choices">
@@ -567,7 +838,226 @@
                                     <span class="result-value" id="final-score"></span>
                                 </div>
                             </div>
-                            <button class="game-button primary" id="restart-game">🔄 Rejouer</button>
+                            <button class="game-button primary" id="restart-game"><i data-feather="rotate-cw" style="width: 18px; height: 18px; vertical-align: middle; margin-right: 6px;"></i> Rejouer</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Jeu 2 : Vrai ou Faux -->
+            <section class="game-section" id="game-mythes" style="display: none;">
+                <button class="back-to-games" onclick="backToGamesMenu()">
+                    <i data-feather="arrow-left" style="width: 18px; height: 18px; vertical-align: middle; margin-right: 6px;"></i>
+                    Retour aux jeux
+                </button>
+                
+                <h2 class="game-title"><i data-feather="help-circle"></i> Vrai ou Faux ?</h2>
+                <p class="game-intro">Teste tes connaissances ! Démêle le vrai du faux sur 10 affirmations courantes sur l'argent.</p>
+                
+                <div id="mythes-game-container">
+                    <!-- Zone de démarrage -->
+                    <div id="mythes-start" class="game-start">
+                        <h3>Prêt à tester tes connaissances ?</h3>
+                        <p>Tu vas voir <strong>10 affirmations</strong> sur l'argent et les finances.</p>
+                        <p>À toi de dire si c'est <strong class="text-green">VRAI</strong> ou <strong class="text-red">FAUX</strong> !</p>
+                        <ul class="game-rules">
+                            <li><i data-feather="award" style="width: 16px; height: 16px; vertical-align: middle; margin-right: 6px;"></i> <strong>+10 points</strong> par bonne réponse</li>
+                            <li><i data-feather="info" style="width: 16px; height: 16px; vertical-align: middle; margin-right: 6px;"></i> Tu verras une explication après chaque réponse</li>
+                            <li><i data-feather="target" style="width: 16px; height: 16px; vertical-align: middle; margin-right: 6px;"></i> <strong>Objectif</strong> : Obtenir au moins 70/100 !</li>
+                        </ul>
+                        <button class="game-button primary" id="start-mythes-game">
+                            <i data-feather="play" style="width: 18px; height: 18px; vertical-align: middle; margin-right: 6px;"></i>
+                            Commencer le jeu
+                        </button>
+                    </div>
+
+                    <!-- Zone de jeu -->
+                    <div id="mythes-play-area" style="display: none;">
+                        <!-- Progression -->
+                        <div class="mythes-progress">
+                            <div class="progress-bar">
+                                <div class="progress-fill" id="mythes-progress-bar"></div>
+                            </div>
+                            <p class="progress-text">Question <span id="mythes-current">1</span> / 10</p>
+                        </div>
+
+                        <!-- Carte de question -->
+                        <div class="event-card" style="margin-top: 30px;">
+                            <div class="mythes-question" id="mythes-question-card">
+                                <div class="event-icon" id="mythes-icon">
+                                    <i data-feather="help-circle" style="width: 60px; height: 60px;"></i>
+                                </div>
+                                <h3 id="mythes-statement" style="font-size: 1.4em; line-height: 1.6; margin: 30px 0;"></h3>
+                                
+                                <div class="mythes-buttons">
+                                    <button class="game-button" id="btn-vrai" onclick="checkMythes(true)" 
+                                            style="background: linear-gradient(135deg, var(--color-soft-green), #27ae60); color: white; font-size: 1.2em; padding: 20px; margin: 10px;">
+                                        <i data-feather="check-circle" style="width: 24px; height: 24px; vertical-align: middle; margin-right: 10px;"></i>
+                                        VRAI
+                                    </button>
+                                    <button class="game-button" id="btn-faux" onclick="checkMythes(false)" 
+                                            style="background: linear-gradient(135deg, var(--color-coral), #e74c3c); color: white; font-size: 1.2em; padding: 20px; margin: 10px;">
+                                        <i data-feather="x-circle" style="width: 24px; height: 24px; vertical-align: middle; margin-right: 10px;"></i>
+                                        FAUX
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Zone de feedback -->
+                        <div id="mythes-feedback" style="display: none; margin-top: 30px;">
+                            <div class="event-card" id="mythes-feedback-card">
+                                <!-- Le feedback sera inséré ici -->
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Zone de résultats -->
+                    <div id="mythes-results" style="display: none;">
+                        <div class="game-result">
+                            <div class="event-icon" id="mythes-result-icon">
+                                <i data-feather="award" style="width: 60px; height: 60px;"></i>
+                            </div>
+                            <h3 id="mythes-result-title">Bravo !</h3>
+                            <p id="mythes-result-text" style="font-size: 1.2em; margin: 20px 0;"></p>
+                            <p style="font-size: 2em; font-weight: bold; color: var(--color-soft-blue); margin: 30px 0;">
+                                Score : <span id="mythes-final-score">0</span> / 100
+                            </p>
+                            <button class="game-button primary" id="restart-mythes-game">
+                                <i data-feather="rotate-cw" style="width: 18px; height: 18px; vertical-align: middle; margin-right: 6px;"></i>
+                                Rejouer
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Jeu 3 : Tri des Dépenses -->
+            <section class="game-section" id="game-tri" style="display: none;">
+                <button class="back-to-games" onclick="backToGamesMenu()">
+                    <i data-feather="arrow-left" style="width: 18px; height: 18px; vertical-align: middle; margin-right: 6px;"></i>
+                    Retour aux jeux
+                </button>
+                
+                <h2 class="game-title"><i data-feather="filter"></i> Tri des Dépenses</h2>
+                <p class="game-intro">Classe rapidement 18 dépenses dans la bonne catégorie. Es-tu capable de faire la différence entre un besoin, une envie, un piège et une obligation légale ?</p>
+                
+                <div id="tri-game-container">
+                    <!-- Zone de démarrage -->
+                    <div id="tri-start" class="game-start">
+                        <h3>Prêt pour le défi ?</h3>
+                        <p>Tu vas voir <strong>18 dépenses</strong> une par une.</p>
+                        <p>Classe chacune dans la bonne catégorie :</p>
+                        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 20px; margin: 30px 0;">
+                            <div style="background: linear-gradient(135deg, #667eea, #764ba2); color: white; padding: 20px; border-radius: 16px; text-align: center;">
+                                <div style="font-size: 2em; margin-bottom: 10px;">
+                                    <i data-feather="check-circle" style="width: 40px; height: 40px;"></i>
+                                </div>
+                                <h4 style="color: white; margin-bottom: 10px;">BESOIN</h4>
+                                <p style="font-size: 0.9em; opacity: 0.9; color: white;">Essentiel pour vivre</p>
+                            </div>
+                            <div style="background: linear-gradient(135deg, #f093fb, #f5576c); color: white; padding: 20px; border-radius: 16px; text-align: center;">
+                                <div style="font-size: 2em; margin-bottom: 10px;">
+                                    <i data-feather="heart" style="width: 40px; height: 40px;"></i>
+                                </div>
+                                <h4 style="color: white; margin-bottom: 10px;">ENVIE</h4>
+                                <p style="font-size: 0.9em; opacity: 0.9; color: white;">Pas essentiel mais ok</p>
+                            </div>
+                            <div style="background: linear-gradient(135deg, #fa709a, #fee140); color: white; padding: 20px; border-radius: 16px; text-align: center;">
+                                <div style="font-size: 2em; margin-bottom: 10px;">
+                                    <i data-feather="alert-triangle" style="width: 40px; height: 40px;"></i>
+                                </div>
+                                <h4 style="color: white; margin-bottom: 10px;">PIÈGE</h4>
+                                <p style="font-size: 0.9em; opacity: 0.9; color: white;">Dangereux financièrement</p>
+                            </div>
+                            <div style="background: linear-gradient(135deg, #ff0844, #ffb199); color: white; padding: 20px; border-radius: 16px; text-align: center;">
+                                <div style="font-size: 2em; margin-bottom: 10px;">
+                                    <i data-feather="alert-octagon" style="width: 40px; height: 40px;"></i>
+                                </div>
+                                <h4 style="color: white; margin-bottom: 10px;">OBLIGATOIRE</h4>
+                                <p style="font-size: 0.9em; opacity: 0.9; color: white;">Obligation légale</p>
+                            </div>
+                        </div>
+                        <ul class="game-rules">
+                            <li><i data-feather="award" style="width: 16px; height: 16px; vertical-align: middle; margin-right: 6px;"></i> <strong>+10 points</strong> par bonne réponse</li>
+                            <li><i data-feather="zap" style="width: 16px; height: 16px; vertical-align: middle; margin-right: 6px;"></i> Sois rapide et précis !</li>
+                            <li><i data-feather="target" style="width: 16px; height: 16px; vertical-align: middle; margin-right: 6px;"></i> <strong>Objectif</strong> : 144/180 points</li>
+                        </ul>
+                        <button class="game-button primary" id="start-tri-game">
+                            <i data-feather="play" style="width: 18px; height: 18px; vertical-align: middle; margin-right: 6px;"></i>
+                            Commencer le jeu
+                        </button>
+                    </div>
+
+                    <!-- Zone de jeu -->
+                    <div id="tri-play-area" style="display: none;">
+                        <!-- Score et progression -->
+                        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 30px; flex-wrap: wrap; gap: 15px;">
+                            <div style="background: white; padding: 15px 25px; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+                                <span style="color: var(--color-text); font-size: 0.9em;">Score</span>
+                                <div style="font-size: 1.8em; font-weight: 700; color: var(--color-soft-blue);" id="tri-score">0</div>
+                            </div>
+                            <div style="background: white; padding: 15px 25px; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+                                <span style="color: var(--color-text); font-size: 0.9em;">Progression</span>
+                                <div style="font-size: 1.8em; font-weight: 700; color: var(--color-soft-green);" id="tri-progress">1/15</div>
+                            </div>
+                        </div>
+
+                        <!-- Carte de dépense -->
+                        <div class="event-card tri-depense-card" id="tri-depense-card" style="max-width: 600px; margin: 0 auto;">
+                            <div class="event-icon" id="tri-icon" style="background: linear-gradient(135deg, #4facfe, #00f2fe);">
+                                <i data-feather="shopping-bag" style="width: 60px; height: 60px;"></i>
+                            </div>
+                            <h3 id="tri-depense" style="font-size: 1.6em; margin: 25px 0;">Acheter un téléphone à crédit</h3>
+                            
+                            <!-- Boutons de tri -->
+                            <div style="display: grid; grid-template-columns: 1fr; gap: 15px; margin-top: 30px;">
+                                <button class="game-button" id="btn-besoin" onclick="classifyDepense('besoin')" 
+                                        style="background: linear-gradient(135deg, #667eea, #764ba2); color: white; font-size: 1.1em; padding: 18px;">
+                                    <i data-feather="check-circle" style="width: 24px; height: 24px; vertical-align: middle; margin-right: 10px;"></i>
+                                    BESOIN
+                                </button>
+                                <button class="game-button" id="btn-envie" onclick="classifyDepense('envie')" 
+                                        style="background: linear-gradient(135deg, #f093fb, #f5576c); color: white; font-size: 1.1em; padding: 18px;">
+                                    <i data-feather="heart" style="width: 24px; height: 24px; vertical-align: middle; margin-right: 10px;"></i>
+                                    ENVIE
+                                </button>
+                                <button class="game-button" id="btn-piege" onclick="classifyDepense('piege')" 
+                                        style="background: linear-gradient(135deg, #fa709a, #fee140); color: white; font-size: 1.1em; padding: 18px;">
+                                    <i data-feather="alert-triangle" style="width: 24px; height: 24px; vertical-align: middle; margin-right: 10px;"></i>
+                                    PIÈGE
+                                </button>
+                                <button class="game-button" id="btn-obligatoire" onclick="classifyDepense('obligatoire')" 
+                                        style="background: linear-gradient(135deg, #ff0844, #ffb199); color: white; font-size: 1.1em; padding: 18px;">
+                                    <i data-feather="alert-octagon" style="width: 24px; height: 24px; vertical-align: middle; margin-right: 10px;"></i>
+                                    OBLIGATOIRE
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Zone de feedback -->
+                        <div id="tri-feedback" style="display: none; margin-top: 30px; max-width: 600px; margin-left: auto; margin-right: auto;">
+                            <div class="event-card" id="tri-feedback-card">
+                                <!-- Le feedback sera inséré ici -->
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Zone de résultats -->
+                    <div id="tri-results" style="display: none;">
+                        <div class="game-result">
+                            <div class="event-icon" id="tri-result-icon">
+                                <i data-feather="award" style="width: 60px; height: 60px;"></i>
+                            </div>
+                            <h3 id="tri-result-title">Bravo !</h3>
+                            <p id="tri-result-text" style="font-size: 1.2em; margin: 20px 0;"></p>
+                            <p style="font-size: 2em; font-weight: bold; color: var(--color-soft-blue); margin: 30px 0;">
+                                Score : <span id="tri-final-score">0</span> / <span id="tri-max-score">180</span>
+                            </p>
+                            <button class="game-button primary" id="restart-tri-game">
+                                <i data-feather="rotate-cw" style="width: 18px; height: 18px; vertical-align: middle; margin-right: 6px;"></i>
+                                Rejouer
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -576,9 +1066,15 @@
         
         <!-- Onglet Quiz Final -->
         <div class="tab-content" id="tab-quiz-final">
+        
+        <!-- Image illustrative -->
+        <div class="section-image">
+            <img src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=1200&q=80" alt="Étudiant en train d'apprendre">
+        </div>
+        
         <!-- Quiz 2 : Et maintenant ? -->
         <section class="quiz-section quiz-2">
-            <h2 class="quiz-title">🎓 Et maintenant ?</h2>
+            <h2 class="quiz-title"><i data-feather="award"></i> Et maintenant ?</h2>
             <p class="quiz-intro">Tu as lu tous les conseils ? Parfait ! Maintenant, voyons si tu as bien compris avec des exercices variés. 10 questions pour tester ta compréhension !</p>
             
             <div id="quiz2-container">
@@ -700,8 +1196,8 @@
                 <div id="quiz2-result" class="quiz-result" style="display: none;">
                     <h3 id="quiz2-result-score"></h3>
                     <p id="quiz2-result-message"></p>
-                    <p class="result-cta">🎉 <strong>Bravo ! Tu as terminé tous les exercices. Tu es maintenant mieux armé·e pour gérer ton argent intelligemment !</strong></p>
-                    <button id="quiz2-restart" class="quiz-button restart">🔄 Recommencer le quiz</button>
+                    <p class="result-cta"><i data-feather="star" style="width: 20px; height: 20px; vertical-align: middle; margin-right: 8px;"></i> <strong>Bravo ! Tu as terminé tous les exercices. Tu es maintenant mieux armé·e pour gérer ton argent intelligemment !</strong></p>
+                    <button id="quiz2-restart" class="quiz-button restart"><i data-feather="rotate-cw" style="width: 18px; height: 18px; vertical-align: middle; margin-right: 6px;"></i> Recommencer le quiz</button>
                 </div>
             </div>
         </section>
@@ -715,6 +1211,10 @@
     </footer>
 
     <script src="script.js"></script>
+    <script>
+        // Initialiser Feather Icons
+        feather.replace();
+    </script>
 </body>
 </html>
 
