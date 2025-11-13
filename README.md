@@ -21,7 +21,7 @@ jom-budget/
 ## 🚀 Comment tester ton site
 
 ### Méthode simple (recommandée) :
-1. Ouvre le fichier `index.html` dans ton explorateur de fichiers
+1. Ouvre le fichier `index.html` dans ton explorateur de fichiers 
 2. Double-clique dessus → il s'ouvre dans ton navigateur web
 3. À chaque modification, sauvegarde les fichiers (Ctrl+S) et rafraîchis la page (F5) dans le navigateur
 

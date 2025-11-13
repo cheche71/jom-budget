@@ -8,11 +8,706 @@
 </head>
 <body>
     <header>
-        <h1>Bien gérer son argent</h1>
+        <h1>Bien gérer son argent!</h1>
     </header>
 
     <main>
-        <!-- Le contenu sera ajouté ici -->
+        <!-- Navigation par onglets -->
+        <div class="tabs-container">
+            <div class="tabs">
+                <button class="tab-button active" data-tab="accueil">🏠 Accueil</button>
+                <button class="tab-button" data-tab="quiz-depart">🎯 Quiz de départ</button>
+                <button class="tab-button" data-tab="mauvais">⚠️ Mauvais réflexes</button>
+                <button class="tab-button" data-tab="bons">✅ Bons réflexes</button>
+                <button class="tab-button" data-tab="consequences">📚 Les conséquences</button>
+                <button class="tab-button" data-tab="jeu">🎮 Le Défi du Mois</button>
+                <button class="tab-button" data-tab="quiz-final">🎓 Quiz final</button>
+            </div>
+        </div>
+
+        <!-- Contenu des onglets -->
+        <div class="tab-content active" id="tab-accueil">
+            <section class="intro">
+            <p class="intro-title">💰 Pourquoi c'est important de bien gérer son argent ?</p>
+            <ul>
+                <li>Que ce soit ton argent de poche, ton salaire de petit job ou tes économies, <strong>chaque franc compte</strong></li>
+                <li>Aujourd'hui, il est super facile de dépenser : un clic, une carte, et hop !</li>
+                <li>Mais attention, <strong>l'argent ne tombe pas du ciel</strong>, et une fois dépensé, il ne revient pas</li>
+                <li>Savoir gérer son argent, c'est <strong>se protéger des problèmes financiers</strong> qui peuvent durer des années</li>
+                <li>De mauvaises décisions peuvent t'empêcher de réaliser tes projets (permis de conduire, voyages, études...)</li>
+            </ul>
+            
+            <p class="intro-title">📚 Ce que tu vas découvrir sur cette page :</p>
+            <ul>
+                <li>Les <strong>mauvais réflexes</strong> qui peuvent te mettre dans le rouge (crédit à la consommation, leasing, carte de crédit)</li>
+                <li>Les <strong>bons réflexes</strong> pour économiser, dépenser intelligemment et garder le contrôle de tes finances</li>
+                <li>Des <strong>quiz et jeux interactifs</strong> pour tester tes connaissances de manière ludique</li>
+            </ul>
+            <p class="intro-cta">Prêt·e à devenir un·e pro de la gestion d'argent ? C'est parti ! 🚀</p>
+        </section>
+        </div>
+
+        <!-- Onglet Quiz de départ -->
+        <div class="tab-content" id="tab-quiz-depart">
+            <section class="quiz-section">
+            <h2 class="quiz-title">🎯 Quiz : où en es-tu dans tes connaissances de base ?</h2>
+            <p class="quiz-intro">Avant de découvrir tous les conseils ci-dessous, voyons où tu en es ! 5 questions pour tester tes connaissances de base en gestion d'argent.</p>
+            
+            <div id="quiz-container">
+                <div class="question-container" id="question-1">
+                    <h3>Question 1/5 : Le budget</h3>
+                    <p>Tu reçois 100 francs d'argent de poche par mois. Tu dépenses 60 francs en sorties, 30 francs en snacks et 20 francs en jeux vidéo. Que se passe-t-il ?</p>
+                    <div class="options">
+                        <label><input type="radio" name="q1" value="wrong1"> Tu es dans les clous, tout va bien</label>
+                        <label><input type="radio" name="q1" value="correct"> Tu dépenses 10 francs de trop, tu es en négatif</label>
+                        <label><input type="radio" name="q1" value="wrong2"> Il te reste 10 francs à économiser</label>
+                    </div>
+                </div>
+
+                <div class="question-container" id="question-2" style="display: none;">
+                    <h3>Question 2/5 : Les intérêts</h3>
+                    <p>Tu veux acheter un téléphone à 800 francs. On te propose un crédit à 10% d'intérêts. Combien vas-tu payer au total ?</p>
+                    <div class="options">
+                        <label><input type="radio" name="q2" value="wrong1"> 800 francs (le prix normal)</label>
+                        <label><input type="radio" name="q2" value="wrong2"> 810 francs (10 francs d'intérêts)</label>
+                        <label><input type="radio" name="q2" value="correct"> 880 francs (80 francs d'intérêts)</label>
+                    </div>
+                </div>
+
+                <div class="question-container" id="question-3" style="display: none;">
+                    <h3>Question 3/5 : Les achats impulsifs</h3>
+                    <p>Tu vois des baskets en promo à 120 francs. Tu as l'argent sur toi. Quelle est la meilleure décision ?</p>
+                    <div class="options">
+                        <label><input type="radio" name="q3" value="wrong1"> Les acheter tout de suite avant que la promo ne se termine</label>
+                        <label><input type="radio" name="q3" value="correct"> Attendre quelques jours pour réfléchir si tu en as vraiment besoin</label>
+                        <label><input type="radio" name="q3" value="wrong2"> Les acheter avec ta carte de crédit pour garder ton cash</label>
+                    </div>
+                </div>
+
+                <div class="question-container" id="question-4" style="display: none;">
+                    <h3>Question 4/5 : L'épargne</h3>
+                    <p>Tu veux acheter une console à 400 francs. Tu mets 20 francs de côté chaque semaine. Dans combien de temps pourras-tu l'acheter ?</p>
+                    <div class="options">
+                        <label><input type="radio" name="q4" value="wrong1"> 10 semaines (environ 2 mois et demi)</label>
+                        <label><input type="radio" name="q4" value="correct"> 20 semaines (environ 5 mois)</label>
+                        <label><input type="radio" name="q4" value="wrong2"> 40 semaines (environ 10 mois)</label>
+                    </div>
+                </div>
+
+                <div class="question-container" id="question-5" style="display: none;">
+                    <h3>Question 5/5 : Les contrats</h3>
+                    <p>Un vendeur te propose un super contrat de leasing pour un scooter. Il parle très vite et te dit de signer maintenant. Que fais-tu ?</p>
+                    <div class="options">
+                        <label><input type="radio" name="q5" value="wrong1"> Tu signes, c'est une bonne affaire !</label>
+                        <label><input type="radio" name="q5" value="wrong2"> Tu demandes juste le prix mensuel et tu signes</label>
+                        <label><input type="radio" name="q5" value="correct"> Tu refuses de signer et tu demandes conseil à un adulte de confiance</label>
+                    </div>
+                </div>
+
+                <div class="quiz-navigation">
+                    <button id="prev-button" class="quiz-button secondary" style="display: none;">← Précédente</button>
+                    <button id="next-button" class="quiz-button">Suivante →</button>
+                </div>
+                
+                <div id="quiz-result" class="quiz-result" style="display: none;">
+                    <h3 id="result-score"></h3>
+                    <p id="result-message"></p>
+                    <p class="result-cta">📚 <strong>Découvre maintenant tous les conseils ci-dessous pour devenir un·e pro de la gestion d'argent !</strong></p>
+                    <button id="restart-quiz" class="quiz-button restart">🔄 Recommencer le quiz</button>
+                </div>
+            </div>
+        </section>
+        </div>
+
+        <!-- Onglet Mauvais réflexes -->
+        <div class="tab-content" id="tab-mauvais">
+            <h2 class="tab-page-title">⚠️ Les mauvais réflexes financiers</h2>
+            <p class="tab-page-intro">Découvre les pièges financiers à éviter absolument pour protéger ton avenir.</p>
+        
+            <section class="card">
+            <h3>💳 Le crédit à la consommation</h3>
+            <p>
+                Le crédit à la consommation, c'est quand tu empruntes de l'argent à une banque ou un magasin 
+                pour acheter quelque chose tout de suite (un smartphone, des vêtements, une console...), 
+                mais que tu dois rembourser petit à petit, avec des <strong>intérêts en plus</strong>.
+            </p>
+            
+            <h4>✅ Avantage :</h4>
+            <ul>
+                <li>Tu peux acheter quelque chose immédiatement sans avoir tout l'argent</li>
+            </ul>
+            
+            <h4>❌ Inconvénients :</h4>
+            <ul>
+                <li>Tu paies <strong>beaucoup plus cher</strong> que le prix initial avec les intérêts</li>
+                <li>Exemple : un téléphone à 1000 francs peut te coûter <strong>1300 francs au final</strong>
+                <li>Les petits paiements mensuels semblent faciles, mais <strong>s'accumulent</strong> rapidement</li>
+                <li>Si tu ne peux plus payer, tu risques des <strong>poursuites</strong></li>
+                <li>Tu peux avoir des <strong>problèmes d'argent pendant des années</strong>
+            </ul>
+            <p class="warning">C'est comme payer pour quelque chose que tu n'as pas acheté !</p>
+        </section>
+
+        <section class="card">
+            <h3>🚗 Le leasing</h3>
+            <p>
+                Le leasing, c'est comme louer quelque chose (souvent une voiture ou un téléphone) en payant 
+                chaque mois, avec l'idée de peut-être l'acheter à la fin.
+            </p>
+            
+            <h4>✅ Avantage :</h4>
+            <ul>
+                <li>Tu peux conduire un véhicule récent sans avoir besoin de tout l'argent d'un coup</li>
+            </ul>
+            
+            <h4>❌ Inconvénients :</h4>
+            <ul>
+                <li>Tu paies chaque mois sans <strong>jamais vraiment être propriétaire</strong></li>
+                <li>Tu dois respecter des <strong>règles strictes</strong> (kilomètres limités, pas de modifications)</li>
+                <li>Si tu veux arrêter avant la fin, <strong>ça peut coûter très cher !</strong></li>
+                <li>Au final, tu paies <strong>beaucoup plus</strong> que si tu avais acheté d'occasion</li>
+                <li>Si tu ne peux plus payer, on te reprend le véhicule, mais tu dois <strong>quand même rembourser</strong> ce que tu dois</li>
+            </ul>
+            <p class="warning">C'est un piège !</p>
+        </section>
+
+        <section class="card">
+            <h3>💳 La carte de crédit</h3>
+            <p>
+                La carte de crédit permet d'acheter maintenant et de payer plus tard. À la fin du mois, 
+                tu peux choisir de tout rembourser ou de payer petit à petit. Ça semble pratique pour 
+                gérer son argent, mais c'est un outil risqué si on ne fait pas attention !
+            </p>
+            
+            <h4>✅ Avantages :</h4>
+            <ul>
+                <li>Pratique pour les achats en ligne et à l'étranger</li>
+                <li>Si tu rembourses tout chaque mois, pas d'intérêts</li>
+            </ul>
+            
+            <h4>❌ Inconvénients :</h4>
+            <ul>
+                <li>Si tu ne paies pas tout, les <strong>intérêts sont énormes</strong> (parfois 15-20% !)</li>
+                <li>C'est <strong>facile de dépenser trop</strong> car l'argent ne sort pas tout de suite</li>
+                <li>Les petits achats <strong>s'accumulent rapidement</strong> sans qu'on s'en rende compte</li>
+                <li>Tu peux te retrouver avec des <strong>dettes importantes</strong> très vite</li>
+                <li>Les <strong>frais cachés</strong> peuvent s'ajouter (frais annuels, frais de retrait, etc.)</li>
+            </ul>
+            <p class="warning">L'illusion de l'argent facile !</p>
+        </section>
+
+        <section class="card">
+            <h3>📱 Suivre les influenceurs et la mode</h3>
+            <p>
+                Sur les réseaux sociaux, tu vois des influenceurs avec les dernières baskets, le dernier téléphone, 
+                les vêtements de marque... Ça donne envie d'acheter la même chose pour être "à la mode" et ressembler 
+                à tes idoles. Mais attention, c'est un piège qui peut te coûter très cher !
+            </p>
+            
+            <h4>✅ Avantage :</h4>
+            <ul>
+                <li>Tu es à la mode et tu te sens bien avec les dernières tendances</li>
+            </ul>
+            
+            <h4>❌ Inconvénients :</h4>
+            <ul>
+                <li>Les tendances changent <strong>toutes les semaines</strong>, tu veux toujours acheter quelque chose de nouveau</li>
+                <li>Les produits "influenceurs" sont souvent <strong>très chers</strong> pour ce qu'ils sont</li>
+                <li>Tu dépenses pour <strong>impressionner les autres</strong>, pas pour toi-même</li>
+                <li>Tu finis par avoir <strong>les mêmes choses que tout le monde</strong>, rien d'unique</li>
+                <li>Les influenceurs sont <strong>payés pour promouvoir</strong> ces produits, ce n'est pas sincère</li>
+                <li>Tu accumules des objets qui ne te servent <strong>plus dans quelques mois</strong></li>
+            </ul>
+            <p class="warning">Être toi-même coûte moins cher qu'être une copie !</p>
+        </section>
+        </div>
+
+        <!-- Onglet Bons réflexes -->
+        <div class="tab-content" id="tab-bons">
+            <h2 class="tab-page-title">✅ Les bons réflexes financiers</h2>
+            <p class="tab-page-intro">Apprends les bonnes pratiques pour gérer ton argent intelligemment et construire ton avenir.</p>
+            
+            <section class="card">
+            <h3>📊 Faire un budget (revenus - dépenses = reste)</h3>
+            <p>
+                Un budget, c'est un petit calcul simple pour savoir où va ton argent. Tu notes ce que tu 
+                reçois (revenus : argent de poche, job...) et ce que tu dépenses (sorties, jeux, vêtements...). 
+                La différence, c'est ce qu'il te reste pour économiser ou pour les imprévus.
+            </p>
+            <h4>💡 Pourquoi c'est important :</h4>
+            <ul>
+                <li>Tu sais <strong>exactement combien tu as</strong> et combien tu peux dépenser</li>
+                <li>Tu évites les <strong>mauvaises surprises</strong> en fin de mois</li>
+                <li>Tu peux <strong>planifier tes projets</strong> et tes économies</li>
+                <li>Tu apprends à <strong>prioriser</strong> tes dépenses</li>
+                <li>C'est un réflexe qui te servira <strong>toute ta vie</strong></li>
+            </ul>
+            <p class="warning">Connaître son budget, c'est avoir le contrôle !</p>
+        </section>
+
+        <section class="card">
+            <h3>⏰ Attendre quelques jours avant un achat important (le temps de réfléchir)</h3>
+            <p>
+                Avant d'acheter quelque chose de cher, prends quelques jours pour y réfléchir. Laisse passer 
+                l'excitation du moment et demande-toi : "Est-ce que j'en ai vraiment besoin ?" Souvent, après 
+                quelques jours, on se rend compte qu'on peut s'en passer !
+            </p>
+            <h4>💡 Pourquoi c'est important :</h4>
+            <ul>
+                <li>Tu évites les <strong>achats impulsifs</strong> que tu regretteras plus tard</li>
+                <li>Tu as le temps de <strong>comparer les prix</strong> et trouver de meilleures offres</li>
+                <li>Tu peux vérifier si tu as <strong>vraiment les moyens</strong></li>
+                <li>Ça permet de distinguer tes <strong>vrais besoins</strong> de tes envies passagères</li>
+                <li>Tu économises de l'argent pour des choses qui comptent <strong>vraiment</strong></li>
+            </ul>
+            <p class="warning">La patience fait économiser des centaines de francs !</p>
+        </section>
+
+        <section class="card">
+            <h3>🐷 Économiser petit à petit pour les gros achats</h3>
+            <p>
+                Au lieu d'acheter immédiatement avec un crédit, mets de l'argent de côté régulièrement. 
+                Même 10 ou 20 francs par semaine, ça s'accumule ! En quelques mois, tu auras assez pour 
+                t'acheter ce que tu veux, sans payer d'intérêts.
+            </p>
+            <h4>💡 Pourquoi c'est important :</h4>
+            <ul>
+                <li>Tu paies le <strong>prix réel</strong>, sans intérêts en plus</li>
+                <li>Tu apprécies davantage ce que tu achètes car <strong>tu as fait l'effort</strong> d'économiser</li>
+                <li>Tu développes la <strong>discipline</strong> et la patience</li>
+                <li>Tu as un <strong>coussin de sécurité</strong> pour les imprévus</li>
+                <li>Pas de stress ni de dettes : tu dors <strong>tranquille</strong></li>
+            </ul>
+            <p class="warning">Économiser = liberté financière !</p>
+        </section>
+
+        <section class="card">
+            <h3>📝 Ne pas signer un contrat qu'on ne comprend pas</h3>
+            <p>
+                Un contrat (crédit, abonnement, leasing...), c'est un engagement sérieux. Si tu ne comprends 
+                pas tout ce qui est écrit, ou si on te pousse à signer vite "sans te poser de questions", 
+                c'est un gros drapeau rouge ! Ne signe JAMAIS quelque chose que tu ne comprends pas.
+            </p>
+            <h4>💡 Pourquoi c'est important :</h4>
+            <ul>
+                <li>Les contrats contiennent souvent des <strong>frais cachés</strong> et des pièges</li>
+                <li>Tu t'engages parfois pour <strong>plusieurs années</strong></li>
+                <li>Si tu ne respectes pas le contrat, tu peux avoir des <strong>poursuites</strong></li>
+                <li>Une fois signé, c'est <strong>très difficile</strong> de revenir en arrière</li>
+                <li>Prendre le temps de comprendre te protège des <strong>arnaques</strong></li>
+            </ul>
+            <p class="warning">Ta signature = ton engagement. Sois sûr·e de ce que tu fais !</p>
+        </section>
+
+        <section class="card">
+            <h3>👥 Parler à un adulte de confiance en cas de doute</h3>
+            <p>
+                Si quelqu'un te propose un crédit, un contrat ou un "super deal", et que tu ne sais pas 
+                quoi faire, parles-en à un adulte de confiance (parents, tuteur, conseiller...). Ils ont 
+                plus d'expérience et peuvent t'aider à voir les pièges que tu ne vois pas.
+            </p>
+            <h4>💡 Pourquoi c'est important :</h4>
+            <ul>
+                <li>Les adultes ont souvent <strong>déjà vécu</strong> ces situations</li>
+                <li>Ils peuvent repérer les <strong>arnaques</strong> et les mauvaises offres</li>
+                <li>Demander conseil n'est <strong>pas une faiblesse</strong>, c'est une force</li>
+                <li>Tu évites de faire des erreurs qui peuvent coûter <strong>très cher</strong></li>
+                <li>Une décision financière importante mérite <strong>un deuxième avis</strong></li>
+            </ul>
+            <p class="warning">Demander de l'aide, c'est intelligent, pas embarrassant !</p>
+        </section>
+        </div>
+        
+        <!-- Onglet Conséquences -->
+        <div class="tab-content" id="tab-consequences">
+        <!-- Encadrés explicatifs sur les dettes et poursuites -->
+        <section class="info-block-container">
+            <h2 class="info-main-title">📚 Comprendre les conséquences financières</h2>
+            <p class="info-intro">Avant d'aller plus loin, voici des explications concrètes sur ce qui peut t'arriver si tu accumules des dettes. Ces termes peuvent sembler compliqués, mais il est important de les comprendre.</p>
+
+            <!-- Encadré 1 : Explications des termes -->
+            <div class="info-block definition-block">
+                <h3>📖 C'est quoi exactement ces termes ?</h3>
+                
+                <div class="definition-item">
+                    <h4>🔔 Le commandement de payer</h4>
+                    <p>C'est la <strong>première lettre officielle</strong> que tu reçois quand tu ne paies pas une dette. C'est comme un avertissement formel : "Tu dois payer, sinon on passe aux choses sérieuses". Cette lettre est déjà enregistrée dans ton dossier.</p>
+                </div>
+
+                <div class="definition-item">
+                    <h4>⚖️ La poursuite</h4>
+                    <p>Si tu ne paies toujours pas, l'entreprise ou la banque lance une <strong>poursuite officielle</strong>. C'est une procédure légale qui est inscrite dans <strong>l'extrait du registre des poursuites</strong> pendant au minimum <strong>5 ans</strong>. Tout le monde peut voir que tu as eu des problèmes d'argent (propriétaires, employeurs, banques).</p>
+                </div>
+
+                <div class="definition-item">
+                    <h4>📋 L'extrait du registre des poursuites</h4>
+                    <p>C'est un <strong>document officiel</strong> que n'importe qui peut demander te concernant. Il montre toutes tes poursuites et tes ADB des dernières années. Les propriétaires, les banques et certains employeurs le demandent systématiquement. Un extrait "propre" (sans poursuites) est essentiel pour ta vie d'adulte.</p>
+                </div>
+
+                <div class="definition-item adb-highlight">
+                    <h4>🚨 L'acte de défaut de biens (ADB)</h4>
+                    <p>C'est le <strong>niveau le plus grave</strong>. Un ADB signifie que tu as été poursuivi, qu'un huissier est venu vérifier chez toi, et qu'il a constaté officiellement que <strong>tu n'as pas d'argent ni de biens</strong> pour payer ta dette. Cet ADB reste visible <strong>20 ANS</strong> sur ton extrait si tu ne paies pas ! C'est un gros handicap pour ton avenir.</p>
+                </div>
+
+                <div class="definition-item">
+                    <h4>💰 La saisie sur salaire</h4>
+                    <p>Si tu as un salaire et que tu ne paies pas tes dettes, l'huissier peut demander à ton employeur de <strong>prélever directement une partie de ton salaire</strong> chaque mois (jusqu'à 50% dans certains cas !). Tu reçois ton salaire déjà amputé. Imagine : tu gagnes 2000 francs, mais tu n'en reçois que 1000.</p>
+                </div>
+            </div>
+
+            <!-- Encadré 2 : Conséquences concrètes -->
+            <div class="info-block consequences-block">
+                <h3>🎯 Les conséquences concrètes au quotidien</h3>
+                
+                <div class="consequence-category">
+                    <h4>🏠 Trouver un logement</h4>
+                    <ul>
+                        <li>Les propriétaires demandent <strong>systématiquement</strong> ton extrait du registre</li>
+                        <li>Avec des poursuites ou un ADB : <strong>refus quasi-automatique</strong></li>
+                        <li>Tu devras chercher pendant des mois, accepter des logements plus chers et de moins bonne qualité</li>
+                        <li>Certains acceptent mais demandent <strong>3 à 6 mois de caution</strong> au lieu d'un</li>
+                    </ul>
+                </div>
+
+                <div class="consequence-category">
+                    <h4>💼 Travailler</h4>
+                    <ul>
+                        <li>Les métiers de la <strong>banque, assurance, comptabilité</strong> exigent souvent un extrait vierge</li>
+                        <li>Certains <strong>apprentissages</strong> peuvent être annulés si l'entreprise découvre tes dettes</li>
+                        <li>Les postes avec <strong>responsabilités financières</strong> te seront refusés</li>
+                        <li>Tu perds des opportunités professionnelles pendant des années</li>
+                    </ul>
+                </div>
+
+                <div class="consequence-category">
+                    <h4>💳 Gérer ton argent</h4>
+                    <ul>
+                        <li><strong>Aucune banque</strong> ne t'accordera de crédit</li>
+                        <li><strong>Pas de carte de crédit</strong>, parfois même pas de carte bancaire normale</li>
+                        <li>Refus pour les <strong>abonnements téléphoniques</strong> (paiement d'avance obligatoire)</li>
+                        <li>Les assurances peuvent te refuser ou augmenter tes primes</li>
+                    </ul>
+                </div>
+
+                <div class="consequence-category">
+                    <h4>🎓 Réaliser tes projets</h4>
+                    <ul>
+                        <li>Difficile d'obtenir un <strong>prêt étudiant</strong> pour tes études</li>
+                        <li>Impossible de <strong>créer une entreprise</strong> (pas de crédit de démarrage)</li>
+                        <li>Compliqué de <strong>voyager</strong> (pas de carte pour réserver hôtels/voitures)</li>
+                        <li>Tes rêves sont reportés de plusieurs années, voire abandonnés</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Encadré 3 : Le piège de la spirale -->
+            <div class="info-block spiral-block">
+                <h3>🌀 Le piège de la spirale d'endettement</h3>
+                <p class="spiral-intro">Voici comment une petite dette peut devenir un gros problème :</p>
+                
+                <div class="spiral-steps">
+                    <div class="spiral-step">
+                        <span class="step-number">1</span>
+                        <p>Tu achètes un téléphone à <strong>1000 francs</strong> avec un crédit à 15% d'intérêts</p>
+                    </div>
+                    <div class="spiral-step">
+                        <span class="step-number">2</span>
+                        <p>Tu paies 100 francs par mois, mais les <strong>intérêts s'accumulent</strong> (12.50 francs/mois)</p>
+                    </div>
+                    <div class="spiral-step">
+                        <span class="step-number">3</span>
+                        <p>Un mois, tu <strong>ne peux pas payer</strong>. Tu reçois un <strong>rappel</strong> avec des frais (30 francs)</p>
+                    </div>
+                    <div class="spiral-step">
+                        <span class="step-number">4</span>
+                        <p>Tu continues à ne pas payer. <strong>Commandement de payer</strong> (100 francs de frais)</p>
+                    </div>
+                    <div class="spiral-step">
+                        <span class="step-number">5</span>
+                        <p><strong>Poursuite</strong> lancée (200 francs de frais), inscrite sur ton extrait pour 5 ans</p>
+                    </div>
+                    <div class="spiral-step">
+                        <span class="step-number">6</span>
+                        <p>Huissier vérifie chez toi → <strong>ADB</strong> car tu n'as rien. Reste 20 ans sur ton extrait !</p>
+                    </div>
+                    <div class="spiral-step final-step">
+                        <span class="step-number">💥</span>
+                        <p>Total : Un téléphone à 1000 francs te coûte maintenant <strong>plus de 1500 francs</strong> + <strong>20 ans de galère</strong> pour louer, travailler, emprunter...</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Encadré 4 : Durées et chiffres -->
+            <div class="info-block duration-block">
+                <h3>⏰ Combien de temps ça dure ?</h3>
+                <div class="duration-grid">
+                    <div class="duration-item">
+                        <div class="duration-time">5 ans</div>
+                        <p>Une <strong>poursuite</strong> reste visible sur ton extrait pendant 5 ans minimum</p>
+                    </div>
+                    <div class="duration-item highlight-duration">
+                        <div class="duration-time">20 ans</div>
+                        <p>Un <strong>ADB</strong> reste visible 20 ans si la dette n'est pas payée !</p>
+                    </div>
+                    <div class="duration-item">
+                        <div class="duration-time">3-6 mois</div>
+                        <p>Le temps moyen pour trouver un appartement quand tu as des poursuites (au lieu de 2-4 semaines)</p>
+                    </div>
+                </div>
+                <p class="duration-note">💡 <strong>Pour te donner une idée :</strong> Si tu as 16 ans et que tu accumules des dettes qui mènent à un ADB, tu peux être impacté jusqu'à tes 36 ans. C'est toute ta jeunesse et le début de ta vie adulte.</p>
+            </div>
+
+            <!-- Encadré 5 : Solutions -->
+            <div class="info-block solution-block-main">
+                <h3>✅ Tu es en difficulté ? Voici quoi faire</h3>
+                <p class="solution-intro">Si tu as déjà des dettes ou que tu sens que ça devient compliqué, <strong>ne panique pas</strong> et ne reste surtout pas seul·e !</p>
+                
+                <div class="solution-steps">
+                    <div class="solution-step">
+                        <h4>1️⃣ Ne fais JAMAIS ça</h4>
+                        <ul>
+                            <li><strong>❌ Prendre un crédit pour payer un autre crédit</strong> (tu doubles le problème)</li>
+                            <li><strong>❌ Ignorer les lettres</strong> (ça empire la situation)</li>
+                            <li><strong>❌ Cacher la situation</strong> à tes parents ou tuteurs</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="solution-step">
+                        <h4>2️⃣ Fais ça TOUT DE SUITE</h4>
+                        <ul>
+                            <li><strong>✅ Parle-en à un adulte de confiance</strong> (parents, tuteur, enseignant)</li>
+                            <li><strong>✅ Contacte un service de conseil en désendettement</strong> (gratuit en Suisse)</li>
+                            <li><strong>✅ Liste toutes tes dettes</strong> et tes revenus pour avoir une vue claire</li>
+                            <li><strong>✅ Contacte tes créanciers</strong> pour établir un plan de paiement réaliste</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="help-contacts">
+                    <h4>📞 Services d'aide gratuits en Suisse</h4>
+                    <ul>
+                        <li><strong>Caritas</strong> - Conseil en désendettement</li>
+                        <li><strong>Budget-conseil Suisse</strong> - Aide à la gestion du budget</li>
+                        <li><strong>Pro Juventute</strong> - Conseil pour les jeunes (147)</li>
+                    </ul>
+                    <p class="help-note">Ces services sont <strong>gratuits, confidentiels et sans jugement</strong>. Ils sont là pour t'aider, pas pour te faire la morale.</p>
+                </div>
+            </div>
+
+            <div class="final-message">
+                <p>💡 <strong>Rappelle-toi :</strong> Comprendre tout ça, ce n'est pas pour te faire peur, mais pour te donner le pouvoir de faire les bons choix. Éviter les dettes, c'est protéger ta liberté et ton avenir. Et si tu as déjà des difficultés, il n'est jamais trop tard pour demander de l'aide !</p>
+            </div>
+        </section>
+        </div>
+        
+        <!-- Onglet Jeu -->
+        <div class="tab-content" id="tab-jeu">
+            <section class="game-section">
+                <h2 class="game-title">🎮 Le Défi du Mois</h2>
+                <p class="game-intro">Gère ton budget pendant un mois ! Tu commences avec 800 francs. Des événements vont se produire et tu devras faire des choix. Arriveras-tu à la fin du mois sans être en négatif ?</p>
+                
+                <div id="game-container">
+                    <!-- Tableau de bord -->
+                    <div class="dashboard">
+                        <div class="stat-card">
+                            <div class="stat-label">💰 Ton budget</div>
+                            <div class="stat-value" id="budget">800 CHF</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-label">📅 Jour</div>
+                            <div class="stat-value" id="day">1 / 30</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-label">⭐ Score</div>
+                            <div class="stat-value" id="score">0</div>
+                        </div>
+                    </div>
+
+                    <!-- Zone de jeu -->
+                    <div id="game-area">
+                        <div class="game-start">
+                            <h3>Bienvenue dans Le Défi du Mois !</h3>
+                            <p>Tu as <strong>800 francs</strong> pour gérer un mois complet (30 jours).</p>
+                            <p>Des événements vont se produire : certains bons, d'autres... moins ! À toi de faire les bons choix.</p>
+                            <ul class="game-rules">
+                                <li>✅ <strong>Objectif</strong> : Finir le mois avec de l'argent</li>
+                                <li>💡 <strong>Bonus</strong> : Plus tu économises, plus ton score est élevé</li>
+                                <li>⚠️ <strong>Attention</strong> : Si tu tombes en négatif, c'est perdu !</li>
+                            </ul>
+                            <button class="game-button primary" id="start-game">🚀 Commencer le défi</button>
+                        </div>
+                    </div>
+
+                    <!-- Zone des événements (caché au début) -->
+                    <div id="event-area" style="display: none;">
+                        <div class="event-card">
+                            <div class="event-day" id="event-day"></div>
+                            <div class="event-icon" id="event-icon">📅</div>
+                            <h3 id="event-title"></h3>
+                            <p id="event-description"></p>
+                            <div class="event-choices" id="event-choices">
+                                <!-- Les choix seront ajoutés dynamiquement -->
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Écran de fin -->
+                    <div id="game-end" style="display: none;">
+                        <div class="game-result">
+                            <h3 id="result-title"></h3>
+                            <div id="result-icon"></div>
+                            <p id="result-message"></p>
+                            <div class="result-stats">
+                                <div class="result-stat">
+                                    <span class="result-label">Budget final :</span>
+                                    <span class="result-value" id="final-budget"></span>
+                                </div>
+                                <div class="result-stat">
+                                    <span class="result-label">Score :</span>
+                                    <span class="result-value" id="final-score"></span>
+                                </div>
+                            </div>
+                            <button class="game-button primary" id="restart-game">🔄 Rejouer</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+        
+        <!-- Onglet Quiz Final -->
+        <div class="tab-content" id="tab-quiz-final">
+        <!-- Quiz 2 : Et maintenant ? -->
+        <section class="quiz-section quiz-2">
+            <h2 class="quiz-title">🎓 Et maintenant ?</h2>
+            <p class="quiz-intro">Tu as lu tous les conseils ? Parfait ! Maintenant, voyons si tu as bien compris avec des exercices variés. 10 questions pour tester ta compréhension !</p>
+            
+            <div id="quiz2-container">
+                <!-- Question 1 : Conséquences des dettes -->
+                <div class="question-container" id="quiz2-question-1">
+                    <h3>Question 1/10 : Les conséquences réelles</h3>
+                    <p>Tu as des dettes impayées depuis plusieurs mois. Quelles conséquences peux-tu subir en Suisse ? (Attention, plusieurs situations sont vraies)</p>
+                    <div class="options">
+                        <label><input type="radio" name="q2_1" value="wrong1"> Aucune conséquence, les dettes s'effacent après 6 mois</label>
+                        <label><input type="radio" name="q2_1" value="correct"> Tu peux recevoir des poursuites, avoir un extrait du registre négatif, et des difficultés à louer un appartement ou obtenir un crédit</label>
+                        <label><input type="radio" name="q2_1" value="wrong2"> Seulement une lettre de rappel, rien de grave</label>
+                    </div>
+                </div>
+
+                <!-- Question 2 : Extrait du registre des poursuites -->
+                <div class="question-container" id="quiz2-question-2" style="display: none;">
+                    <h3>Question 2/10 : L'extrait du registre des poursuites</h3>
+                    <p>Un propriétaire te demande un extrait du registre des poursuites avant de te louer un appartement. Cet extrait montre 3 poursuites et 1 acte de défaut de biens (ADB). Que se passe-t-il probablement ?</p>
+                    <div class="options">
+                        <label><input type="radio" name="q2_2" value="wrong1"> Rien de grave, tout le monde a des poursuites</label>
+                        <label><input type="radio" name="q2_2" value="correct"> Le propriétaire va probablement refuser de te louer l'appartement car tu es considéré comme à risque</label>
+                        <label><input type="radio" name="q2_2" value="wrong2"> L'extrait n'est qu'une formalité, ça ne change rien</label>
+                    </div>
+                </div>
+
+                <!-- Question 3 : Calcul crédit complexe -->
+                <div class="question-container" id="quiz2-question-3" style="display: none;">
+                    <h3>Question 3/10 : Calcul d'intérêts composés</h3>
+                    <p>Tu achètes un ordinateur à 1200 francs avec un crédit à 18% d'intérêts par an, remboursé en 12 mois. Environ combien vas-tu payer au total ?</p>
+                    <div class="options">
+                        <label><input type="radio" name="q2_3" value="wrong1"> 1210 francs (juste 10 francs de plus)</label>
+                        <label><input type="radio" name="q2_3" value="wrong2"> 1218 francs (18 francs d'intérêts)</label>
+                        <label><input type="radio" name="q2_3" value="correct"> Environ 1320 francs (environ 120 francs d'intérêts)</label>
+                    </div>
+                </div>
+
+                <!-- Question 4 : Acte de défaut de biens (ADB) -->
+                <div class="question-container" id="quiz2-question-4" style="display: none;">
+                    <h3>Question 4/10 : Qu'est-ce qu'un acte de défaut de biens (ADB) ?</h3>
+                    <p>L'acte de défaut de biens (ADB) est inscrit dans ton extrait du registre des poursuites. Qu'est-ce que cela signifie concrètement ?</p>
+                    <div class="options">
+                        <label><input type="radio" name="q2_4" value="wrong1"> C'est juste un document administratif sans importance</label>
+                        <label><input type="radio" name="q2_4" value="correct"> Cela signifie que tu n'as pas pu payer tes dettes, ce qui peut te bloquer pour obtenir un crédit, louer un appartement, ou même certains emplois pendant des années</label>
+                        <label><input type="radio" name="q2_4" value="wrong2"> C'est un cadeau fiscal de l'État</label>
+                    </div>
+                </div>
+
+                <!-- Question 5 : Carte de crédit piège -->
+                <div class="question-container" id="quiz2-question-5" style="display: none;">
+                    <h3>Question 5/10 : Le piège de la carte de crédit</h3>
+                    <p>Ta carte de crédit a une limite de 2000 francs avec un taux d'intérêt de 15% par an. Tu dépenses 1500 francs et tu paies seulement le "minimum mensuel" de 50 francs par mois. Que se passe-t-il ?</p>
+                    <div class="options">
+                        <label><input type="radio" name="q2_5" value="wrong1"> Tu auras fini de payer en 30 mois (1500/50)</label>
+                        <label><input type="radio" name="q2_5" value="correct"> Tu paieras pendant environ 3-4 ans et tu paieras au total beaucoup plus que 1500 francs à cause des intérêts qui s'accumulent</label>
+                        <label><input type="radio" name="q2_5" value="wrong2"> La banque arrête les intérêts après 6 mois</label>
+                    </div>
+                </div>
+
+                <!-- Question 6 : Effet boule de neige -->
+                <div class="question-container" id="quiz2-question-6" style="display: none;">
+                    <h3>Question 6/10 : L'effet boule de neige des dettes</h3>
+                    <p>Tu as 3 crédits en cours : téléphone (50 francs/mois), vêtements (80 francs/mois), console (60 francs/mois). Tu gagnes 800 francs/mois et ton loyer + charges = 600 francs. Quelle est la situation réelle ?</p>
+                    <div class="options">
+                        <label><input type="radio" name="q2_6" value="wrong1"> Tout va bien, il te reste 10 francs (800-600-50-80-60)</label>
+                        <label><input type="radio" name="q2_6" value="correct"> Tu es déjà en déficit ! Il te reste 10 francs mais tu n'as rien compté pour manger, transports, santé... Tu vas accumuler encore plus de dettes</label>
+                        <label><input type="radio" name="q2_6" value="wrong2"> Tu peux encore prendre un 4ème crédit sans problème</label>
+                    </div>
+                </div>
+
+                <!-- Question 7 : Durée des poursuites -->
+                <div class="question-container" id="quiz2-question-7" style="display: none;">
+                    <h3>Question 7/10 : Combien de temps restent les poursuites ?</h3>
+                    <p>Une poursuite (et un éventuel ADB) apparaît sur ton extrait du registre des poursuites en Suisse. Combien de temps cette information reste-t-elle visible ?</p>
+                    <div class="options">
+                        <label><input type="radio" name="q2_7" value="wrong1"> 6 mois maximum</label>
+                        <label><input type="radio" name="q2_7" value="wrong2"> 1 an après le paiement</label>
+                        <label><input type="radio" name="q2_7" value="correct"> 5 ans pour les poursuites, 20 ans pour les actes de défaut de biens si la dette n'est pas payée</label>
+                    </div>
+                </div>
+
+                <!-- Question 8 : Leasing complexe -->
+                <div class="question-container" id="quiz2-question-8" style="display: none;">
+                    <h3>Question 8/10 : Le coût réel du leasing</h3>
+                    <p>Tu fais un leasing pour un scooter : 200 francs/mois pendant 36 mois, puis option d'achat de 1500 francs. Si tu veux finalement le garder, combien auras-tu payé au total ?</p>
+                    <div class="options">
+                        <label><input type="radio" name="q2_8" value="wrong1"> 7200 francs (200×36)</label>
+                        <label><input type="radio" name="q2_8" value="correct"> 8700 francs (200×36 + 1500), alors qu'un scooter d'occasion similaire coûte souvent 3000-4000 francs</label>
+                        <label><input type="radio" name="q2_8" value="wrong2"> 1500 francs (juste l'option d'achat)</label>
+                    </div>
+                </div>
+
+                <!-- Question 9 : Spirale d'endettement -->
+                <div class="question-container" id="quiz2-question-9" style="display: none;">
+                    <h3>Question 9/10 : La spirale d'endettement</h3>
+                    <p>Tu ne peux plus payer ton crédit. Pour "résoudre" le problème, tu prends un autre crédit pour payer le premier. Que se passe-t-il réellement ?</p>
+                    <div class="options">
+                        <label><input type="radio" name="q2_9" value="wrong1"> C'est une bonne solution, tu gagnes du temps</label>
+                        <label><input type="radio" name="q2_9" value="wrong2"> Aucun problème, les banques font ça tout le temps</label>
+                        <label><input type="radio" name="q2_9" value="correct"> Tu entres dans une spirale dangereuse : tu as maintenant DEUX crédits avec DEUX intérêts, ta dette totale augmente, et tu risques le surendettement et les poursuites</label>
+                    </div>
+                </div>
+
+                <!-- Question 10 : Impact sur la vie -->
+                <div class="question-container" id="quiz2-question-10" style="display: none;">
+                    <h3>Question 10/10 : L'impact à long terme</h3>
+                    <p>À 16 ans, tu accumules des petites dettes (abonnements, achats en ligne impayés) qui deviennent des poursuites. Quelles conséquences à 20 ans quand tu veux devenir indépendant·e ?</p>
+                    <div class="options">
+                        <label><input type="radio" name="q2_10" value="wrong1"> Aucune, tout s'efface quand tu deviens majeur·e</label>
+                        <label><input type="radio" name="q2_10" value="wrong2"> C'est un problème mineur qui se règle facilement</label>
+                        <label><input type="radio" name="q2_10" value="correct"> Refus de location d'appartement, refus de crédit, difficultés pour certains emplois, impossibilité d'avoir une carte de crédit, impact sur ta vie pendant des années</label>
+                    </div>
+                </div>
+
+                <div class="quiz-navigation">
+                    <button id="quiz2-prev-button" class="quiz-button secondary" style="display: none;">← Précédente</button>
+                    <button id="quiz2-next-button" class="quiz-button">Suivante →</button>
+                </div>
+                
+                <div id="quiz2-result" class="quiz-result" style="display: none;">
+                    <h3 id="quiz2-result-score"></h3>
+                    <p id="quiz2-result-message"></p>
+                    <p class="result-cta">🎉 <strong>Bravo ! Tu as terminé tous les exercices. Tu es maintenant mieux armé·e pour gérer ton argent intelligemment !</strong></p>
+                    <button id="quiz2-restart" class="quiz-button restart">🔄 Recommencer le quiz</button>
+                </div>
+            </div>
+        </section>
+        </div>
+        
+        <!-- Le reste du contenu sera ajouté ici -->
     </main>
 
     <footer>
