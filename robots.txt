@@ -1,0 +1,19 @@
+# robots.txt pour Bien gérer son argent
+
+# Autoriser tous les robots à indexer tout le site
+User-agent: *
+Allow: /
+
+# Lien vers le sitemap
+Sitemap: https://cheche71.github.io/jom-budget/sitemap.xml
+
+# Optimisation pour les principaux moteurs de recherche
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Slurp
+Allow: /
+
